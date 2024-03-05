@@ -30,7 +30,18 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
       {{-- tags input  --}}
       <script src="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+        <!-- JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
+        <script>
+        // Initialize Summernote Lite
+        $(document).ready(function() {
+            $('#summernote').summernote();
+            $('.summernote').summernote();
+            $('#summernote1').summernote();
+        });
+        </script>
       <script src="{{ asset('backend/assets/js/validate.min.js') }}"></script>
       <script>
           @if (Session::has('message'))

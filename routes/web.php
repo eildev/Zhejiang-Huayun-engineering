@@ -16,6 +16,10 @@ use App\Http\Controllers\Backend\NewsController;
 use App\Http\Controllers\Backend\OurPartnerController;
 use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\WhyChooseUsController;
+use App\Http\Controllers\Backend\AboutIntroduction;
+use App\Http\Controllers\Backend\SlideController;
+use App\Http\Controllers\Backend\SectionController;
+use App\Http\Controllers\Backend\SectionDetailsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -198,11 +202,44 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::post('/our-partner-status/{id}', 'status')->name('our-partner.status');
     });
 
-
-
+  //About Intro Related Routes
+  Route::controller(AboutIntroduction::class)->group(function () {
+    Route::get('/about/intro/add', 'AboutIntroAdd')->name('about.intro.add');
+    Route::post('/about/intro/store', 'StoreAboutIntro')->name('store.about.intro');
+    Route::get('/about/intro/view', 'ViewAboutIntro')->name('about.intro.view');
+    Route::get('/about/intro/edit/{id}', 'EditAboutIntro')->name('edit.about.intro');
+    Route::post('/about/intro/update/{id}', 'UpdatAboutIntro')->name('update.about.intro');
+    Route::get('/about/intro/delete/{id}', 'DeleteAboutIntro')->name('delete.about.intro');
+});
+ //  Slider  routes
+ Route::controller(SlideController::class)->group(function () {
+    Route::get('/slider/add', 'SliderAdd')->name('add.slider');
+    Route::post('/slider/store', 'StoreSlider')->name('store.slider');
+    Route::get('/slider/view', 'ViewSlider')->name('slider.view');
+    Route::get('/slider/edit/{id}', 'EditSlider')->name('edit.slider');
+    Route::post('/slider/update/{id}', 'UpdateSlider')->name('update.slider');
+   Route::get('/slider/delete/{id}', 'DeleteSlider')->name('delete.slider');
+});
+     // Section related routes
+     Route::controller(SectionController::class)->group(function () {
+        Route::get('/section/add', 'SectionAdd')->name('add.section');
+        Route::post('/section/store', 'StoreSection')->name('store.section');
+        Route::get('/section/view', 'ViewSection')->name('view.section');
+        Route::get('/section/edit/{id}', 'EditSection')->name('edit.section');
+        Route::post('/section/update/{id}', 'UpdateSection')->name('update.section');
+        Route::get('/section/delete/{id}', 'DeleteSection')->name('delete.section');
+    });
+     // Section related routes
+     Route::controller(SectionDetailsController::class)->group(function () {
+        Route::get('/section/details/add', 'SectionDetailsAdd')->name('add.section.details');
+        Route::post('/section/details/store', 'StoreSectionDetails')->name('store.section.details');
+        Route::get('/section/details/view', 'ViewSectionDetails')->name('view.section.details');
+        Route::get('/section/details/edit/{id}', 'EditSectionDetails')->name('edit.section.details');
+        Route::post('/section/details/update/{id}', 'UpdateSectionDetails')->name('update.section.details');
+        Route::get('/section/details/delete/{id}', 'DeleteSectionDetails')->name('delete.section.details');
+    });
     // Log::warning("message");
 });
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -23,7 +23,7 @@
                             <label for="example-email-input" class="col-sm-2 col-form-label">Title</label>
                             <div class="col-sm-10">
                                 <input class="form-control @error('title') is-invalid  @enderror" name="title"
-                                    type="text" placeholder="Enter  About Title" id="example-email-input">
+                                    type="text" placeholder="Enter About Title"  id="example-email-input">
                                 @error('title')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror

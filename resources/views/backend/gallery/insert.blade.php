@@ -88,7 +88,7 @@
                     required : 'Please Select The Category Name',
                 },
                 gallery_image: {
-                    required : 'Please Select The Image ',
+                    required : 'Please Select The Image',
                 },
                 gallery_title: {
                     required : 'Please Enter The Title ',

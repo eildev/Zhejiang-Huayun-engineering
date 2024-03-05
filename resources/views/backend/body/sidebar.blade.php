@@ -41,6 +41,16 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
+                        <span>Home Slider</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('add.slider') }}">Add Home Slider</a></li>
+                        <li><a href="{{ route('slider.view') }}">Manage Home Slider</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
                         <span>About Settings</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -48,6 +58,17 @@
                         <li><a href="{{ route('about.view') }}">Manage About Settings</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>About Introduction</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('about.intro.add') }}">Add About Intro</a></li>
+                        <li><a href="{{ route('about.intro.view') }}">Manage About Intro</a></li>
+                    </ul>
+                </li>
+               
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -66,6 +87,26 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('category.add') }}">Add Category</a></li>
                         <li><a href="{{ route('category.view') }}">Manage Category</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Section Settings</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('add.section') }}">Add Section</a></li>
+                        <li><a href="{{ route('view.section') }}">Manage Section </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Section Details</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('add.section.details') }}">Add Section Details</a></li>
+                        <li><a href="{{ route('view.section.details') }}">Manage Section Details</a></li>
                     </ul>
                 </li>
                 <li>
