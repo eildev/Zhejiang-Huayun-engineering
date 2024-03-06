@@ -14,7 +14,7 @@ class SectionDetailsController extends Controller
         $request->validate([
             'title' => 'required',
             'desciption' => 'required',
-            'multi_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048' // Validate each uploaded image
+            'multi_image' => 'required' 
         ]);
     
         // Store each uploaded image
@@ -23,29 +23,24 @@ class SectionDetailsController extends Controller
             foreach ($request->file('multi_image') as $image) {
                 $imageName = rand() . '.' . $image->getClientOriginalExtension();
                 $image->move(public_path('uploads/multi_img/'), $imageName);
-                $imageNames[] = $imageName; // Store the image name in an array
+                $imageNames[] = $imageName;
             }
         }
     
-        // Create a new instance of SectionDetails model
         $sectionDetails = new SectionDetails;
         $sectionDetails->title = $request->title;
         $sectionDetails->desciption = $request->desciption;
-    
-        // If there are uploaded images, store the image names in the multi_image column
+
         if (!empty($imageNames)) {
-            $sectionDetails->multi_image = implode(',', $imageNames); // Store multiple image names as comma-separated string
+            $sectionDetails->multi_image = implode(',', $imageNames); 
         }
-    
-        // Save the section details to the database
         $sectionDetails->save();
-    
-        // Redirect back with success message
+
         $notification = array(
             'message' => 'Section Details Successfully Inserted',
             'alert-type' => 'info'
         );
-        return redirect()->back()->with($notification);
+        return redirect()->route('view.section.details')->with($notification);
     }
     public function ViewSectionDetails(){
         $sectionDetails = SectionDetails::latest()->get();
@@ -56,4 +51,63 @@ class SectionDetailsController extends Controller
         $sectionDetailsall = SectionDetails::findOrFail($id)->get();
         return view('backend.section_details.edit', compact('sectionDetails','sectionDetailsall'));
     }//
+    //Update Section Details
+    public function UpdateSectionDetails(Request $request, $id){
+        $request->validate([
+            'title' => 'required',
+            'desciption' => 'required',
+        ]);
+        $sectionDetails = SectionDetails::findOrFail($id);
+        $sectionDetails->title = $request->title;
+        $sectionDetails->desciption = $request->desciption;
+     
+        $existingImageNames = explode(',', $sectionDetails->multi_image);
+    
+        if ($request->hasFile('multi_image')) {
+            // Store each uploaded image
+            $newImageNames = [];
+            foreach ($request->file('multi_image') as $image) {
+                $imageName = rand() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('uploads/multi_img/'), $imageName);
+                $newImageNames[] = $imageName; // Store the image name in an array
+            }
+            if (!empty($newImageNames)) {
+                $sectionDetails->multi_image = implode(',', $newImageNames); 
+
+                $imagesToDelete = array_diff($existingImageNames, $newImageNames);
+                foreach ($imagesToDelete as $imageName) {
+                    $imagePath = public_path('uploads/multi_img/') . $imageName;
+                    if (file_exists($imagePath)) {
+                        unlink($imagePath); 
+                    }
+                }
+            }
+        }
+    
+        $sectionDetails->save();
+        $notification = array(
+            'message' => 'Section Details Successfully Updated',
+            'alert-type' => 'info'
+        );
+        return redirect()->route('view.section.details')->with($notification);
+    }//End  Method
+    //Delete Section Details
+    public function DeleteSectionDetails( Request $request,$id){
+        $sectionDetails = SectionDetails::findOrFail($id);
+        $existingImageNames = explode(',', $sectionDetails->multi_image);
+
+        foreach ($existingImageNames as $imageName) {
+            $imagePath = public_path('uploads/multi_img/') . $imageName;
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+        }
+    $sectionDetails->delete();
+    $notification = array(
+        'message' => 'Section Details Successfully Deleted',
+        'alert-type' => 'info'
+    );
+    return redirect()->back()->with($notification);
+    }
 }
+

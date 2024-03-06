@@ -36,9 +36,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 //Admin Dashboard
 Route::middleware(['auth', 'role:admin'])->group(function () {
@@ -52,7 +52,10 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 });
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
-
+    
+    Route::fallback(function () {
+        return view('backend.errors.404');
+    });
     //Footer Route
     Route::controller(FooterController::class)->group(function () {
         Route::get('/footer/add', 'FooterAdd')->name('add.footer');

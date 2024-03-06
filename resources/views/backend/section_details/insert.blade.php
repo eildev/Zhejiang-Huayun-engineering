@@ -10,7 +10,7 @@
             <div class="page-title-right">
                <ol class="breadcrumb m-0">
                 <li class="breadcrumb-item active">
-                    <a href="{{route('view.section')}}" class=" btn btn-sm btn-primary text-light fs-4"> +</a>
+                    <a href="{{route('view.section.details')}}" class=" btn btn-sm btn-primary text-light fs-4"> +</a>
                 </li>
               </ol>
             </div>
@@ -57,9 +57,7 @@
                     <div class="row" id="preview_img"></div>
                         <!-- <img id="preview_img" class="rounded avatar-lg row" src="{{asset('uploads/about/no_images.jpg')}}" alt="Image"> -->
                     </div>
-
                 </div>
-
                 <div class="row mb-3">
                     <label for="example-number-input" class="col-sm-2 col-form-label"></label>
                     <div class="col-sm-10">

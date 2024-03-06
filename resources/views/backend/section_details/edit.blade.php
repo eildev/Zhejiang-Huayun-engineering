@@ -10,13 +10,13 @@
             <div class="page-title-right">
                <ol class="breadcrumb m-0">
                 <li class="breadcrumb-item active">
-                    <a href="{{route('view.section')}}" class=" btn btn-sm btn-primary text-light fs-4"> +</a>
+                    <a href="{{route('view.section.details')}}" class=" btn btn-sm btn-primary text-light fs-4"> +</a>
                 </li>
               </ol>
             </div>
             </div>
                 <hr>
-                <form action="{{route('store.section.details')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('update.section.details',$sectionDetails->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                 <!-- end row -->
              
@@ -55,11 +55,11 @@
                     <label for="example-url-input" class="col-sm-2 col-form-label"></label>
                     <div class="col-sm-10">
                     <div class="row" id="preview_img">
-                    <!-- @foreach ($sectionDetailsall as $item)
+                    @foreach ($sectionDetailsall as $item)
                         @foreach(explode(',', $item->multi_image) as $image)
                             <img style="height: 60px; width:60px; margin-right: 5px;" src="{{ asset('uploads/multi_img/' . $image) }}" alt="Image">
                         @endforeach
-                    @endforeach -->
+                    @endforeach
                 </div>
                         <!-- <img id="preview_img" class="rounded avatar-lg row" src="{{asset('uploads/about/no_images.jpg')}}" alt="Image"> -->
                     </div>

@@ -14,7 +14,7 @@
         </div>
         <div class="ms-auto">
             <div class="btn-group">
-                <a href="{{route('add.section')}}" class="btn btn-sm btn-primary text-light fs-4">+</a>
+                <a href="{{route('add.section.details')}}" class="btn btn-sm btn-primary text-light fs-4">+</a>
             </div>
         </div>
     </div>
@@ -46,7 +46,7 @@
                             <td>
                                 <a class="btn btn-sm btn-warning" href="{{route('edit.section.details',$item->id)}}">Edit</a>
 
-                            <a href="{{route('delete.section',$item->id)}}" id="delete" class="btn btn-sm btn-danger">Delete</a></td>
+                            <a href="{{route('delete.section.details',$item->id)}}" id="delete" class="btn btn-sm btn-danger">Delete</a></td>
                         </tr>
                         @endforeach
                     </tbody>
