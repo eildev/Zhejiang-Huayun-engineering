@@ -20,7 +20,7 @@ use App\Http\Controllers\Backend\AboutIntroduction;
 use App\Http\Controllers\Backend\SlideController;
 use App\Http\Controllers\Backend\SectionController;
 use App\Http\Controllers\Backend\SectionDetailsController;
-
+use App\Http\Controllers\Frontend\IndexController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,12 +33,8 @@ use App\Http\Controllers\Backend\SectionDetailsController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.frontend_dashboard');
 });
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
 
 //Admin Dashboard
 Route::middleware(['auth', 'role:admin'])->group(function () {
@@ -250,7 +246,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//////////////////////////////////// Frontend Code //////////////////////////////////
 
+
+Route::controller(IndexController::class)->group(function () {
+    Route::get('/contuct-us', 'ContactUs')->name('contact.us');
+    
+});
+//////////////////////////////////// End Frontend Code //////////////////////////////////
 
 //Admin login forgot Pw Route
 Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');

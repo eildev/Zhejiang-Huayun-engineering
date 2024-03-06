@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('section_details', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('section_id');
+            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
             $table->string('title');
             $table->text('desciption');
             $table->text('multi_image');

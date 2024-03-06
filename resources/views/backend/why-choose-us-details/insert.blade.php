@@ -60,7 +60,7 @@
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">Description</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control @error('description') is-invalid  @enderror" id="product_descriptions" name="description"
+                                    <textarea class="form-control @error('description') is-invalid  @enderror" id="summernote" name="description"
                                         style="resize: none; height: 150px;"></textarea>
                                     @error('description')
                                         <span class="text-danger">{{ $message }}</span>

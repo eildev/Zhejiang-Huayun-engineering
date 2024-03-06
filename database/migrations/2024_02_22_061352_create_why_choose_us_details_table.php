@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('why_id');
             $table->foreign('why_id')->references('id')->on('why_choose_us')->onDelete('cascade');
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->string('icon');
             $table->tinyInteger('status')->default(0);
             $table->timestamps();

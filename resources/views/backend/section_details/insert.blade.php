@@ -19,7 +19,21 @@
                 <form action="{{route('store.section.details')}}" method="post" enctype="multipart/form-data">
                     @csrf
                 <!-- end row -->
-             
+                <div class="row mb-3">
+                    <label for="example-email-input" class="col-sm-2 col-form-label">Section Name</label>
+                    <div class="col-sm-10 form-group">
+                        <select class="form-select @error('section') is-invalid  @enderror" name="section"  aria-label="Default select example">
+                            <option selected="" value=""> Select Section Name</option>
+                            @foreach ($section as $sec)
+                            <option value="{{$sec->id}}">{{$sec->title}}</option>
+                            @endforeach
+                        </select>
+                        @error('section')
+                        <span class="text-danger">{{ $message }}</span>
+                       @enderror
+                    </div>
+
+                </div>
                 <div class="row mb-3">
                     <label for="example-email-input" class="col-sm-2 col-form-label">Section Details Title</label>
                     <div class="col-sm-10 form-group">

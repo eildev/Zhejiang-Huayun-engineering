@@ -48,8 +48,9 @@
                                                 <td>
                                                     {{ Illuminate\Support\Str::limit($data->title ?? '', 15) }}
                                                 </td>
+                                                
 
-                                                <td>{{ Illuminate\Support\Str::limit($data->description ?? '', 15) }}</td>
+                                                <td>{!! substr(strip_tags($data->description ), 0, 15) !!}...</td>
                                                 <td>
                                                     <img style="height: 50px; object-fit:contain;"
                                                         src="{{ asset('uploads/why-choose-us/' . $data->icon ?? '') }}"

@@ -33,7 +33,7 @@
                                 <td>{{$key+1}}</td>
                                  <td>{{$item->services_title}}</td>
                                 <td>{{$item->services_sub_title}}</td>
-                                <td>{{$item->service_description}}</td>
+                                <td>{!!$item->service_description!!}</td>
                                 <td>
                                     <a class="btn btn-sm btn-warning" href="{{route('edit.services',$item->id)}}"><i class="fas fa-pencil-alt"></i></a>
 

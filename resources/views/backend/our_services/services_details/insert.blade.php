@@ -49,7 +49,7 @@
                 <div class="row mb-3">
                     <label for="example-text-input" class="col-sm-2 col-form-label">About Description</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control @error('services_details_description') is-invalid  @enderror"  name="services_details_description"
+                        <textarea id="summernote" class="form-control @error('services_details_description') is-invalid  @enderror"  name="services_details_description"
                          style="resize: none; height: 150px;"> </textarea>
 
                          @error('services_details_description')

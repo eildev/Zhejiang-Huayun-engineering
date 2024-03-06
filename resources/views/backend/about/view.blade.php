@@ -34,7 +34,7 @@
                             <tr>
                                 <td>{{$key+1}}</td>
                                 <td>{{$item->title}}</td>
-                                <td>{{$item->description}}</td>
+                                <td>{!!$item->description!!}</td>
                                 <td><img style="height: 60px; width:60px" src="{{asset('uploads/about/'.$item->image)}}" alt=""></td>
 
                                 <td>

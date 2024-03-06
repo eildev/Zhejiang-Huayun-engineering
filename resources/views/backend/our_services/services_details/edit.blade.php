@@ -1,5 +1,6 @@
 @extends('backend.admin_master')
 @section('admin')
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <div class="row">
             <div class="col-12">
@@ -50,8 +51,8 @@
                 <div class="row mb-3">
                     <label for="example-text-input" class="col-sm-2 col-form-label">About Description</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control @error('services_details_description') is-invalid  @enderror"  name="services_details_description"
-                         style="resize: none; height: 150px;">{{$servicesDetails->services_details_description}}</textarea>
+                        <textarea id="summernote" class="form-control @error('services_details_description') is-invalid  @enderror"  name="services_details_description"
+                         style="resize: none; height: 150px;">{!!$servicesDetails->services_details_description!!}</textarea>
 
                          @error('services_details_description')
                          <span class="text-danger">{{ $message }}</span>

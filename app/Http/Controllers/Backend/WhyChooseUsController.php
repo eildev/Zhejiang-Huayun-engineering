@@ -18,7 +18,7 @@ class WhyChooseUsController extends Controller
         // dd($request->all());
         $request->validate([
             'title' => 'required|max:100',
-            'sub_title' => 'required|max:250',
+            'sub_title' => 'required',
         ]);
         $why_chose_us = new WhyChooseUs;
         $why_chose_us->title = $request->title;
@@ -96,7 +96,7 @@ class WhyChooseUsController extends Controller
         // dd($request->all());
         $request->validate([
             'title' => 'required|max:100',
-            'description' => 'required|max:250',
+            'description' => 'required',
             'icon' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         if ($request->icon) {
@@ -128,7 +128,7 @@ class WhyChooseUsController extends Controller
             $iconName = rand() . '.' . $request->icon->extension();
             $request->icon->move(public_path('uploads/why-choose-us/'), $iconName);
             $details = WhyChooseUsDetails::findOrFail($id);
-            unlink(public_path('uploads/why-choose-us/') . $details->icon);
+      //      unlink(public_path('uploads/why-choose-us/') . $details->icon);
             $details->why_id =  $request->why_id;
             $details->title = $request->title;
             $details->description = $request->description;

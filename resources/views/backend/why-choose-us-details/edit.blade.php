@@ -59,7 +59,7 @@
                                 <label for="example-search-input" class="col-sm-2 col-form-label">Description</label>
                                 <div class="col-sm-10">
                                     <textarea class="form-control" rows="5" maxlength="250" placeholder="Message" name="description"
-                                        id="product_descriptions">{{ $data->description ?? '' }}</textarea>
+                                    id="summernote">{!! $data->description ?? '' !!}</textarea>
                                 </div>
                             </div>
                             <div class="row mb-3">

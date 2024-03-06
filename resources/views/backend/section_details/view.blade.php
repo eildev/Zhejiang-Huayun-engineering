@@ -25,6 +25,7 @@
                     <thead>
                         <tr>
                             <th>Id</th>
+                            <th>Section Name</th>
                             <th>Title</th>
                             <th>Description</th>
                             <th> All Image</th>
@@ -36,6 +37,7 @@
                         @foreach ($sectionDetails as $key => $item)
                         <tr>
                             <td>{{$key+1}}</td>
+                            <td>{{$item['section']['title']}}</td>
                             <td>{{$item->title}}</td>
                             <td>{!!$item->desciption!!}</td>
                             <td>
