@@ -21,6 +21,7 @@ use App\Http\Controllers\Backend\SlideController;
 use App\Http\Controllers\Backend\SectionController;
 use App\Http\Controllers\Backend\SectionDetailsController;
 use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Middleware\RedirectIfAuthenticated;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -264,6 +265,7 @@ Route::controller(IndexController::class)->group(function () {
 //////////////////////////////////// End Frontend Code //////////////////////////////////
 
 //Admin login forgot Pw Route
-Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
+Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login')->middleware(RedirectIfAuthenticated::class
+);
 Route::get('/admin/forgot/password', [AdminController::class, 'AdminForgotPassword'])->name('admin.forgot.password');
 require __DIR__ . '/auth.php';
