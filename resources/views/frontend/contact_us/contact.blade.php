@@ -70,40 +70,41 @@
 				</div>
 				<div class="col-lg-6 col-md-12">
 					<div class="choose-contact-box contact-inner">
-						<form action="https://formspree.io/f/myyleorq" method="POST" id="it-form">
+						<form action="{{route('contact.store')}}" method="POST">
+							@csrf
 							<div class="row">
 								<div class="col-lg-6 col-md-6">
 									<div class="form-box contact-inner">
-										<input type="text" name="name" placeholder="Full Name*">
+										<input type="text" name="name" placeholder="Full Name*" required>
 										<i class="bi bi-person"></i>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6">
 									<div class="form-box contact-inner">
-										<input type="text" name="email" placeholder="Email Address*">
+										<input type="email" name="email" placeholder="Email Address*" required>
 										<i class="bi bi-envelope"></i>
 									</div>
 								</div>
 								<div class="col-lg-12">
 									<div class="form-box contact-inner">
-										<input type="text" name="phone" placeholder="Phone Number*">
+										<input type="text" name="phone" placeholder="Phone Number*" required>
 										<i class="bi bi-phone-flip"></i>
 									</div>
 								</div>
 								<div class="col-lg-12">
 									<div class="form-box">
-										<input type="text" name="subject" placeholder="Select Service *">
+										<input type="text" name="service_name" placeholder="Enter Service Name*" required>
 										<i class="bi bi-pencil-square"></i>
 									</div>
 								</div>
 								<div class="col-lg-12">
 									<div class="form-box contact-inner">
-										<input type="text" name="compnay" placeholder="Your Company Name*">
+										<input type="text" name="company_name" placeholder="Your Company Name*" required>
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12">
 									<div class="form-box contact-inner">
-										<textarea name="massage" id="massage" cols="30" rows="10" placeholder="Write your question here*"></textarea>
+										<textarea name="message" id="massage" cols="30" rows="10" placeholder="Write your question here*"></textarea>
 										<i class="bi bi-chat-left-text-fill"></i>
 									</div>
 								</div>

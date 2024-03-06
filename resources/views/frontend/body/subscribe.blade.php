@@ -10,9 +10,10 @@
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6">
-					<form action="https://formspree.io/f/myyleorq" method="POST" id="contact-form">
+					<form action="{{route('store.subscribe')}}" method="POST" id="contact-form">
+						@csrf
 						<div class="form-box Subscribe wow animate__slideInRight">
-							<input type="text" name="email" placeholder="Your Email Address...">
+							<input type="email" name="email" placeholder="Your Email Address...">
 							<button type="submit" class="icons">
 								<i class="bi bi-send"></i>
 							</button>

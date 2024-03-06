@@ -251,6 +251,14 @@ Route::middleware('auth')->group(function () {
 
 Route::controller(IndexController::class)->group(function () {
     Route::get('/contuct-us', 'ContactUs')->name('contact.us');
+    //Subscribe
+    Route::post('/subscribe', 'Subscribe')->name('store.subscribe');
+    Route::get('/subscribe/list', 'SubscribeList')->name('subscribe.list');
+    Route::get('/subscribe/delete/{id}', 'SubscribeDelete')->name('subscribe.delete');
+    //Contct Us 
+    Route::post('/contact/store', 'ContactStore')->name('contact.store');
+    Route::get('/contact/list', 'ContactList')->name('contact.list');
+    Route::get('/contact/delete/{id}', 'ContactDelete')->name('contact.delete');
     
 });
 //////////////////////////////////// End Frontend Code //////////////////////////////////
