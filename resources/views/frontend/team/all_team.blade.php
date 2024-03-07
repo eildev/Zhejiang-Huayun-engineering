@@ -1,5 +1,26 @@
-@php
-$teams = App\Models\ManagingTeams::latest()->limit(4)->get();
+@extends('frontend.frontend_master')
+@section('content')
+<div class="breatcome-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<div class="breatcome-content">
+						<div class="breatcome-title">
+							<h1> Our Team</h1>
+						</div>
+						<div class="bratcome-text">
+							<ul>
+								<li><a href="{{url('/')}}">Home</a></li>
+								<li>  Our Team</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    @php
+$teams = App\Models\ManagingTeams::latest()->get();
 @endphp
 <div class="team-section">
 		<div class="container">
@@ -43,3 +64,4 @@ $teams = App\Models\ManagingTeams::latest()->limit(4)->get();
 			</div>
 		</div>
 	</div>
+@endsection

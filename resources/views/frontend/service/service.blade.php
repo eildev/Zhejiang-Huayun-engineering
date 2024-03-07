@@ -1,5 +1,26 @@
-@php
-$seviceDetails = App\Models\ServicesDetails::latest()->limit(6)->get();
+@extends('frontend.frontend_master')
+@section('content')
+<div class="breatcome-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<div class="breatcome-content">
+						<div class="breatcome-title">
+							<h1>Services</h1>
+						</div>
+						<div class="bratcome-text">
+							<ul>
+								<li><a href="{{url('/')}}">Home</a></li>
+								<li> Services</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    @php
+$seviceDetails = App\Models\ServicesDetails::latest()->get();
 @endphp
 <div class="service-section">
 		<div class="container">
@@ -20,7 +41,7 @@ $seviceDetails = App\Models\ServicesDetails::latest()->limit(6)->get();
 				<div class="col-lg-4 col-md-6">
 					<div class="service-box wow animate__backInLeft">
 						<div class="service-thumb">
-						<img src="{{asset('uploads/services_image/'.$service->services_details_image)}}" height="338" width="438" alt="service">
+							<img src="{{asset('uploads/services_image/'.$service->services_details_image)}}" height="338" width="438" alt="service">
 							<div class="service-content" style="background-image: url({{asset('frontend/uploads/servie-hover.png')}})!important;">
 								<div class="service-icon-thumb">
 									<img src="{{asset('uploads/services_image/'.$service->services_details_icon)}}" height="50" width="46" alt="">
@@ -39,3 +60,6 @@ $seviceDetails = App\Models\ServicesDetails::latest()->limit(6)->get();
 			</div>
 		</div>
 	 </div>
+
+     @include('frontend.indexContent.choose_us')
+@endsection

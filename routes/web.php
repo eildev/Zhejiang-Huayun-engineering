@@ -260,7 +260,15 @@ Route::controller(IndexController::class)->group(function () {
     Route::post('/contact/store', 'ContactStore')->name('contact.store');
     Route::get('/contact/list', 'ContactList')->name('contact.list');
     Route::get('/contact/delete/{id}', 'ContactDelete')->name('contact.delete');
-    
+    ///About US
+    Route::get('/about-us', 'FrontendAbout')->name('frontend.about');
+    ///Service
+    Route::get('/all-service', 'AllService')->name('all.service');
+    Route::get('/service-details/{id}', 'ServiceDetails')->name('service.details');
+    //Team 
+    Route::get('/all-team', 'AllTeam')->name('all.team');
+    Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
+
 });
 //////////////////////////////////// End Frontend Code //////////////////////////////////
 

@@ -14,7 +14,7 @@
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="solar-btn contact-us wow animate__fadeInRight">
-						<a href="contact-us.html">Contact Now <i class="bi bi-arrow-right"></i></a>
+						<a href="{{route('contact.us')}}">Contact Now <i class="bi bi-arrow-right"></i></a>
 					</div>
 				</div>
 			</div>
