@@ -35,7 +35,7 @@ use App\Http\Middleware\RedirectIfAuthenticated;
 
 Route::get('/', function () {
     return view('frontend.frontend_dashboard');
-});
+})->name('/');
 
 //Admin Dashboard
 Route::middleware(['auth', 'role:admin'])->group(function () {
