@@ -66,7 +66,7 @@
                                     {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy ' !!}
                                 </p>
                                 <div class="solar-btn about wow slideInDown">
-                                    <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
+                                    <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
                                 <div class="solar-btn about">
-                                    <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
+                                    <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                                     </div>
                                 </div>
                                 <div class="solar-btn about">
-                                    <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
+                                    <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
