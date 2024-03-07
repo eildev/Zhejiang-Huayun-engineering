@@ -1,3 +1,6 @@
+@php 
+$footer = App\Models\FooterSetting::all()->first();
+@endphp
 <footer class="footer-section">
 		<div class="container">
 			<div class="row">
@@ -42,10 +45,9 @@
 						</div>
 						<div class="footer-wiget-contact-menu">
 							<ul>
-								<li>Valentin, Street Road 24, New York, 
-									USA - 67452</li>
-								<li>(+02) 574 - 328 - 30</li>
-								<li><a href="#">example@gmail.com</a></li>
+								<li>{{$footer->fullAddress}}</li>
+								<li>{{$footer->phone}}</li>
+								<li>{{$footer->email}}</li>
 							</ul>
 						</div>
 					</div>
