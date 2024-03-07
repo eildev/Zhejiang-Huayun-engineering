@@ -30,7 +30,7 @@ class AboutController extends Controller
             $about->image = $imageName;
             $about->save();
             $notification = array(
-                'message' => 'About Sccessfully Inserted',
+                'message' => 'About Successfully Inserted',
                 'alert-type' => 'info'
             );
             return redirect()->route('about.view')->with($notification);
