@@ -9,6 +9,7 @@ use App\Models\Subscribe;
 use App\Models\Contact;
 use App\Models\ServicesDetails;
 use App\Models\ManagingTeams;
+use App\Models\Section;
 use Carbon\Carbon;
 class IndexController extends Controller
 {
@@ -88,4 +89,13 @@ class IndexController extends Controller
     $teamDetails = ManagingTeams::findOrFail($id);
     return view('frontend.team.single_team',compact('teamDetails'));
   }//
+  //Project
+  public function AllProject(){
+    return view('frontend.project.all_project');
+  }//
+  public function ProjectDetails($id){
+    $projectDetail = Section::findOrFail($id);
+    return view('frontend.project.single_project',compact('projectDetail'));
+  }
+
 }

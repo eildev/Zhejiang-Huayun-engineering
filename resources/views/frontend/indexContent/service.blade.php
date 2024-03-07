@@ -27,9 +27,9 @@ $seviceDetails = App\Models\ServicesDetails::latest()->limit(6)->get();
 								</div>
 								<div class="service-text">
 									<h4><a href="{{route('service.details',$service->id)}}">{!! substr(strip_tags($service->services_details_title), 0,20)!!}</a></h4>
-									<p><a href="{{route('service.details',$service->id)}}">{!! substr(strip_tags($service->services_details_description), 0, 72) !!}...</a></p>
+									<p><a href="{{route('service.details',$service->id)}}">{!! Str::limit(strip_tags($service->services_details_description), 72, '...')!!}</a></p>
 									<a href="{{route('service.details',$service->id)}}">Read More <i class="bi bi-arrow-up-right"></i></a>
-								</div>
+								</div>   
 							</div>
 						</div>
 					</div>

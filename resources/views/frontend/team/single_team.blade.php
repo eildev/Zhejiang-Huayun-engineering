@@ -28,7 +28,7 @@
 						<div class="row">
 							<div class="col-lg-6 col-md-6">
 								<div class="team-details-author-img">
-									<img src="{{asset('uploads/managing_team/'.$teamDetails->image)}}" width="437px" height="437px" alt="image">
+									<img src="{{asset('uploads/managing_team/'.$teamDetails->image)}}"  alt="image">
 								</div>
 							</div>
 							<div class=" col-lg-6 col-md-6">
