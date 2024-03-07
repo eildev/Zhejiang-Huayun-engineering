@@ -25,7 +25,7 @@ $slider = App\Models\HomeSlider::latest()->get();
                             </h1>
 							<p>{!!$slide->long_title!!}</p>
 							<div class="solar-btn slider1 wow slideInLeft">
-								<a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
+								<a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
 							</div>
 							<div class="solar-btn slider2  wow slideRight">
 								<a href="#">More About! <i class="bi bi-arrow-right"></i></a>

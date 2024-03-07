@@ -74,7 +74,7 @@
                     <label for="example-text-input" class="col-sm-2 col-form-label">Full Description</label>
                     <div class="col-sm-10">
                         <textarea class="form-control "  name="full_discription"
-                         style="resize: none; height: 150px;" placeholder="Enter Description"></textarea>
+                         style="resize: none; height: 150px;" id="summernote" placeholder="Enter Description"></textarea>
 
                     </div>
                 </div>

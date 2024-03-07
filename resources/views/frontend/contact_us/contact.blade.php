@@ -1,6 +1,8 @@
 @extends('frontend.frontend_master')
 @section('content')
-
+@php 
+$footer = App\Models\FooterSetting::all()->first();
+@endphp
 	<div class="breatcome-section">
 		<div class="container">
 			<div class="row">
@@ -46,7 +48,7 @@
 						</div>
 						<div class="contact-adress">
 							<h5>Address</h5>
-							<span>7515 Carriage Court, Coachella,</span>
+							<span>{{$footer->fullAddress}}</span>
 						</div>
 					</div>
 					<div class="contact-box-item">
@@ -55,7 +57,7 @@
 						</div>
 						<div class="contact-adress">
 							<h5>Call Us Today</h5>
-							<span>(+001) 123-456-7890</span>
+							<span>{{$footer->phone}}</span>
 						</div>
 					</div>
 					<div class="contact-box-item">
@@ -64,7 +66,7 @@
 						</div>
 						<div class="contact-adress">
 							<h5>Email Us</h5>
-							<span>example@gmail.com</span>
+							<span>{{$footer->email}}</span>
 						</div>
 					</div>
 				</div>

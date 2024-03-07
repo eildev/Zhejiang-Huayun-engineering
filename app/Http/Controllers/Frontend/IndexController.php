@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\HomeSlider;
 use App\Models\Subscribe;
 use App\Models\Contact;
+use App\Models\ServicesDetails;
+use App\Models\ManagingTeams;
+use App\Models\Section;
 use Carbon\Carbon;
 class IndexController extends Controller
 {
@@ -48,9 +51,9 @@ class IndexController extends Controller
        'created_at' => Carbon::now(),
     ]);
     $notification = array(
-      'message' => 'Send Your Message Successfully',
-        'alert-type' => 'info'
-      );
+      'message' => 'Thank you, ' . request('name') . '! Your message has been successfully received. We appreciate your communication.',
+      'alert-type' => 'success'
+  );
       return redirect()->back()->with($notification);
   }//
   public function ContactList(){
@@ -65,4 +68,34 @@ class IndexController extends Controller
     );
     return redirect()->back()->with($notification);
   }//
+
+  // About
+  public function FrontendAbout(){
+    return view('frontend.about.about');
+  }//
+  ///All Service
+  public function AllService(){
+    return view('frontend.service.service');
+  }
+  public function ServiceDetails($id){
+    $serviceDetails = ServicesDetails::findOrFail($id);
+    return view('frontend.service.single_service',compact('serviceDetails'));
+  }//
+  ///Team
+  public function AllTeam(){
+    return view('frontend.team.all_team');
+  }
+  public function TeamDetails($id){
+    $teamDetails = ManagingTeams::findOrFail($id);
+    return view('frontend.team.single_team',compact('teamDetails'));
+  }//
+  //Project
+  public function AllProject(){
+    return view('frontend.project.all_project');
+  }//
+  public function ProjectDetails($id){
+    $projectDetail = Section::findOrFail($id);
+    return view('frontend.project.single_project',compact('projectDetail'));
+  }
+
 }

@@ -41,10 +41,8 @@
                                 <td>{{$item->instagram}}</td>
                                 <td>{{$item->linkedin}}</td>
                                 <td>{{$item->twitter}}</td>
-                                <td>{{$item->full_discription}}</td>
+                                <td>{!! substr(strip_tags($item->full_discription), 0, 72) !!}...</td>
                                 <td><img style="height: 60px; width:60px" src="{{asset('uploads/managing_team/'.$item->image)}}" alt="Managing Team"></td>
-
-
                                 <td>
                                     <a class="btn btn-sm btn-warning" href="{{route('edit.managing.team',$item->id)}}"><i class="fas fa-pencil-alt"></i></a>
 

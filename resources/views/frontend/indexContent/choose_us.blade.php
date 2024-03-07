@@ -4,7 +4,7 @@ $chooseUs = App\Models\WhyChooseUsDetails::all()->first();
 @endphp
 <div class="choose-us-section mt-5">
 		<div class="container">
-			<div class="row choose" style="background-image: url({{asset('uploads/why-choose-us/'.$chooseUs->icon)}})!important;">
+			<div class="row choose" style="background-image: url({{asset('uploads/why-choose-us/choose-bg.png')}})!important;">
 				<div class="col-lg-6 col-md-12">
 					<div class="section-title wow animate__slideInUp">
 						<div class="section-sub-title choose ">
@@ -20,7 +20,7 @@ $chooseUs = App\Models\WhyChooseUsDetails::all()->first();
 					<div class="choose-us-content wow animate__zoomIn">
 						<div class="choose-us-info">
 							<div class="solar-btn choose">
-								<a href="#">Contact Now <i class="bi bi-arrow-right"></i></a>
+								<a href="{{route('contact.us')}}">Contact Now <i class="bi bi-arrow-right"></i></a>
 							</div>
 							<div class="choose-us-icon">
 								<i class="bi bi-telephone-plus"></i>
