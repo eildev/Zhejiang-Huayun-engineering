@@ -30,6 +30,7 @@ $section1 = App\Models\Section::all()->first();
 				<div class="col-lg-6 col-md-12">
 
 					@foreach($section as $key => $sec)
+					<a href="{{route('project.details', $sec->id)}}">
 					<div class="protfolio-item wow animate__slideInRight">
 						<div class="protfolio-item-content">
 							<div class="protfolio-item-numbar">
@@ -47,7 +48,7 @@ $section1 = App\Models\Section::all()->first();
 							<i class="bi bi-arrow-up-right"></i>
 						</div>
 					</div> 
-					 
+					</a>
 				 @endforeach
 				</div>
 			</div>
