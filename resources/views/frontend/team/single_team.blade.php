@@ -96,7 +96,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6 col-md-12">
+				<!-- <div class="col-lg-6 col-md-12">
 					<div class="choose-contact-box inner team">
 						<div class="choose-contact-title inner team">
 							<h4>Leave A Message</h4>
@@ -137,7 +137,7 @@
 						</form>
 						<div id="status"></div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
