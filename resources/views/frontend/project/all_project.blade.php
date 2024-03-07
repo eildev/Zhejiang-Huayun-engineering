@@ -34,8 +34,8 @@
 							<img src="{{asset('uploads/section/'.$project->image)}}" height="280px" width="280px" alt="project">
 						</div>
 						<div class="project-content">
-							<h4>{!! Str::limit(strip_tags($project->title), 35, '...')!!}</h4>
-							<span>{!! Str::limit(strip_tags($project->description), 40, '...')!!}</span>
+							<h4>{!! Str::limit(strip_tags($project->title), 35, '...') ?? 'Lorem Ipsum is simply dummy'!!}</h4>
+							<span>{!! Str::limit(strip_tags($project->description), 40, '...') ?? 'Lorem Ipsum is simply dummy'!!}</span>
 						</div>
 					</div>
 				</div>

@@ -13,7 +13,8 @@
             <div class="col-lg-6 col-md-12">
                 <div class="wow slideInLeft">
                     <div class="about-thumb">
-                        <img src="{{ asset('uploads/about/' . $about->image) }}" alt="">
+                    <img src="{{ optional($about)->image ? asset('uploads/about/' . $about->image) : asset('uploads/dummy.jpg') }}" alt="">
+                       
                         <div class="about-counter">
                             <div class="about-counter-text">
                                 <div class="about-numbar">
@@ -27,8 +28,9 @@
                         </div>
                         <div class="about-counter-two d-flex align-items-center ">
                             <div class="about-counter-img">
-                                <img src="{{ asset('uploads/testimonial/' . $testimonial->image) ?? '' }}"
-                                    alt="">
+                            <img src="{{ optional($testimonial)->image ? asset('uploads/testimonial/' . $testimonial->image) : asset('uploads/dummy.jpg') }}" alt="about image">
+
+                              
                             </div>
                             <div class="about-number-two">
                                 <h4 class="counter">2900</h4>
@@ -42,11 +44,10 @@
             <div class="col-lg-6 col-md-12">
                 <div class="about-section-title">
                     <div class="about-section-sub-title wow slideInUp">
-                        <h4>Our Introductton</h4>
+                        <h4>Our Introduction</h4>
                     </div>
                     <div class="about-section-main-title wow slideInRight">
-                        <h2>We're Developing Future
-                            Solar Solutions </h2>
+                        <h2>{{$about->title ?? 'Lorem Ipsum is simply dummy'}} </h2>
                     </div>
                 </div>
                 <!-- tab -->
@@ -62,7 +63,7 @@
                         <div class="tabs_item" style="">
                             <div class="tabs-items-content">
                                 <p>
-                                    {!! $aboutIntro->about !!}
+                                    {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy ' !!}
                                 </p>
                                 <div class="solar-btn about wow slideInDown">
                                     <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
@@ -74,7 +75,7 @@
                     <div class="tabs_item" style="display: none;">
                         <div class="tabs-items-content">
                             <p>
-                                {!! $aboutIntro->about !!}
+                                {!! $aboutIntro->mission ?? 'Lorem Ipsum is simply dummy '!!}
                             </p>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
@@ -107,7 +108,7 @@
                         <div class="tabs-items-content">
                             <div class="about-content-discription">
                                 <p>
-                                    {!! $aboutIntro->about !!}
+                                    {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy ' !!}
                                 </p>
                             </div>
                             <div class="row">
@@ -152,7 +153,7 @@
                             <div class="tabs-items-content">
                                 <div class="about-content-discription wow slideInLeft">
                                     <p>
-                                        {!! $aboutIntro->about !!}
+                                        {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy '!!}
                                     </p>
                                 </div>
                                 <div class="row">
@@ -167,7 +168,7 @@
                             <div class="tabs-items-content">
                                 <div class="about-content-discription wow slideInLeft">
                                     <p>
-                                        {!! $aboutIntro->mission !!}
+                                        {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy '!!}
                                     </p>
                                 </div>
                                 <div class="row">
@@ -182,7 +183,7 @@
                             <div class="tabs-items-content">
                                 <div class="about-content-discription wow slideInLeft">
                                     <p>
-                                        {!! $aboutIntro->vision !!}
+                                        {!! $aboutIntro->vision ?? 'Lorem Ipsum is simply dummy '!!}
                                     </p>
                                 </div>
                                 <div class="row">

@@ -33,8 +33,8 @@ $teams = App\Models\ManagingTeams::latest()->limit(4)->get();
 								<a href="{{route('team.details',$team->id)}}"><i class="bi bi-plus"></i></a>
 							</div>
 							<div class="team-content">
-								<h4><a href="{{route('team.details',$team->id)}}">{{$team->name}}</a></h4>
-								<span>{{$team->designation}}</span>
+								<h4><a href="{{route('team.details',$team->id)}}">{{$team->name ?? 'Lorem Ipsum '}}</a></h4>
+								<span>{{$team->designation ?? 'Lorem Ipsum is '}}</span>
 							</div>
 						</div>
 					</div>

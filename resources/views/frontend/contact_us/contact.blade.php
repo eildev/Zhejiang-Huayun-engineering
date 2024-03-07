@@ -48,7 +48,7 @@ $footer = App\Models\FooterSetting::all()->first();
 						</div>
 						<div class="contact-adress">
 							<h5>Address</h5>
-							<span>{{$footer->fullAddress}}</span>
+							<span>{{$footer->fullAddress ?? "Lorem Ipsum is simply dummy"}}</span>
 						</div>
 					</div>
 					<div class="contact-box-item">
@@ -57,7 +57,7 @@ $footer = App\Models\FooterSetting::all()->first();
 						</div>
 						<div class="contact-adress">
 							<h5>Call Us Today</h5>
-							<span>{{$footer->phone}}</span>
+							<span>{{$footer->phone ?? 'Lorem Ipsum is simply dummy'}}</span>
 						</div>
 					</div>
 					<div class="contact-box-item">
@@ -66,7 +66,7 @@ $footer = App\Models\FooterSetting::all()->first();
 						</div>
 						<div class="contact-adress">
 							<h5>Email Us</h5>
-							<span>{{$footer->email}}</span>
+							<span>{{$footer->email ?? 'example@gmail.com'}}</span>
 						</div>
 					</div>
 				</div>

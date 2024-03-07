@@ -74,7 +74,7 @@
 					</div>
 				</div>
 				<div class="col-lg-12"> 
-                    <p>{!!$projectDetail->description!!}</p>
+                    <p>{!!$projectDetail->description ?? 'Lorem Ipsum is simply dummy'!!}</p>
                 </div>
 			</div>
 		</div>
