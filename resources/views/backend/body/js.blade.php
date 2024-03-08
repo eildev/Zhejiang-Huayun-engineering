@@ -105,8 +105,6 @@
 
       <script src="{{ asset('backend/assets/js/code.js') }}"></script>
       <script src="{{ asset('backend') }}/assets/js/jquery.min.js"></script>
-
-      <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
       <style type="text/css">
         .bootstrap-tagsinput .tag{
             margin-right: 2px;

@@ -10,7 +10,7 @@
 						</div>
 						<div class="bratcome-text">
 							<ul>
-								<li><a href="index.html">Home</a></li>
+								<li><a href="{{url('/')}}">Home</a></li>
 								<li> Project Details</li>
 							</ul>
 						</div>

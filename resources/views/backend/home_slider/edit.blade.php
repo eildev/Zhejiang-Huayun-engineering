@@ -19,23 +19,23 @@
                     @csrf
                 <!-- end row -->
                 <div class="row mb-3">
-                    <label for="example-email-input" class="col-sm-2 col-form-label">Short Caption</label>
+                    <label for="example-email-input" class="col-sm-2 col-form-label">Short Title</label>
                     <div class="col-sm-10 form-group">
-                        <input class="form-control" name="short_title" type="text" value="{{$sliders->short_title}}" placeholder="Enter Short Caption" id="example-email-input">
+                        <input class="form-control" name="short_title" type="text" value="{{$sliders->short_title}}" placeholder="Enter Short Caption" id="example-email-input" required>
                     </div>
 
                 </div>
                 <div class="row mb-3">
-                    <label for="example--input" class="col-sm-2 col-form-label">Long Caption</label>
+                    <label for="example--input" class="col-sm-2 col-form-label">Long Title</label>
                     <div class="col-sm-10 form-group">
-                        <textarea class="form-control" id="summernote"  type="text"  placeholder="Enter Long Caption"  name="long_title" cols="30" rows="5">{!!$sliders->long_title!!}</textarea>
+                        <textarea class="form-control" id="summernote"  type="text"  placeholder="Enter Long Caption"  name="long_title" cols="30" rows="5" required>{!!$sliders->long_title!!}</textarea>
                     </div>
 
                 </div>
                 <div class="row mb-3">
                     <label for="example--input" class="col-sm-2 col-form-label">Slider link</label>
                     <div class="col-sm-10 form-group">
-                    <input class="form-control"  type="url" value="{{$sliders->slider_links}}"  placeholder="Enter Slider link" name="slider_links" id="example-email-input">
+                    <input class="form-control"  type="url" value="{{$sliders->slider_links}}"  placeholder="Enter Slider link" name="slider_links" id="example-email-input" required>
             
                     </div>
 

@@ -17,7 +17,7 @@ $section1 = App\Models\Section::all()->first();
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-6">
 					<div class="solar-btn protfolio">
-						<a href="project-details.html">All  Projects <i class="bi bi-arrow-right"></i></a>
+						<a href="{{route('all.project')}}">All  Projects <i class="bi bi-arrow-right"></i></a>
 					</div>
 				</div>
 			</div>

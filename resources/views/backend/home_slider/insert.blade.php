@@ -21,21 +21,21 @@
                 <div class="row mb-3">
                     <label for="example-email-input" class="col-sm-2 col-form-label">Short title</label>
                     <div class="col-sm-10 form-group">
-                        <input class="form-control" name="short_title" type="text" placeholder="Enter Short Title" id="example-email-input">
+                        <input class="form-control" name="short_title" type="text" placeholder="Enter Short Title" id="example-email-input" required>
                     </div>
 
                 </div>
                 <div class="row mb-3">
                     <label for="example--input" class="col-sm-2 col-form-label">Long Title</label>
                     <div class="col-sm-10 form-group">
-                        <textarea class="form-control" id="summernote" type="text"  placeholder="Enter Long Title" name="long_title" cols="30" rows="5"></textarea>
+                        <textarea class="form-control" id="summernote" type="text"  placeholder="Enter Long Title" name="long_title" cols="30" rows="5" required></textarea>
                     </div>
 
                 </div>
                 <div class="row mb-3">
                     <label for="example--input" class="col-sm-2 col-form-label">Slider link</label>
                     <div class="col-sm-10 form-group">
-                    <input class="form-control"  type="url"  placeholder="Enter Slider link" name="slider_links" id="example-email-input">
+                    <input class="form-control"  type="url"  placeholder="Enter Slider link" name="slider_links" id="example-email-input" required>
             
                     </div>
 
@@ -44,7 +44,7 @@
                 <div class="row mb-3">
                     <label for="example-input" class="col-sm-2 col-form-label">Slider Image</label>
                     <div class="col-sm-10 form-group">
-                        <input name="slider_image" class="form-control" type="file"  id="image">
+                        <input name="slider_image" class="form-control" type="file"  id="image" required>
                     </div>
                 </div>
                 <!-- end row -->
