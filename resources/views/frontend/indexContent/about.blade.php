@@ -51,94 +51,7 @@
                     </div>
                 </div>
                 <!-- tab -->
-                {{-- <div class="tab">
-                    <ul class="tabs active wow slideInRight">
-                        <li class="current"><a href="#">About Us <i class="bi bi-arrow-up-right"></i></a></li>
-                        <li class=""><a href="#">Mission <i class="bi bi-arrow-up-right"></i></a></li>
-                        <li class=""><a href="#">Vision <i class="bi bi-arrow-up-right"></i></a></li>
-                    </ul> <!-- / tabs -->
-
-                    <div class="tab_content">
-                        <!-- / tabs_item -->
-                        <div class="tabs_item" style="">
-                            <div class="tabs-items-content">
-                                <p>
-                                    {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy about' !!}
-                                </p>
-                                <div class="solar-btn about wow slideInDown">
-                                    <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / tabs_item -->
-                    <div class="tabs_item" style="display: none;">
-                        <div class="tabs-items-content">
-                            <p>
-                                {!! $aboutIntro->mission ?? 'Lorem Ipsum is simply dummy mission'!!}
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="about-list">
-                                        <ul>
-                                            <li><i class="bi bi-chevron-double-right"></i> Best Insurance Agency</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Trusted & Experience</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Key Managerial Persons</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="about-list">
-                                        <ul>
-                                            <li><i class="bi bi-chevron-double-right"></i> Dedicated Support</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Board Composition</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Board Committees Voluptat
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="solar-btn about">
-                                    <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / tabs_item -->
-                    <div class="tabs_item" style="display: none;">
-                        <div class="tabs-items-content">
-                            <div class="about-content-discription">
-                                <p>
-                                    {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy vision' !!}
-                                </p>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="about-list">
-                                        <ul>
-                                            <li><i class="bi bi-chevron-double-right"></i> Best Insurance Agency</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Trusted & Experience</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Key Managerial Persons</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="about-list">
-                                        <ul>
-                                            <li><i class="bi bi-chevron-double-right"></i> Dedicated Support </li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Board Composition</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Board Committees Voluptat
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="solar-btn about">
-                                    <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-
+           
                 <!-- tab -->
                 <div class="tab">
                     <ul class="tabs active wow slideInRight">
@@ -158,7 +71,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="solar-btn about wow slideInDown">
-                                        <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
+                                        <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -173,7 +86,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="solar-btn about wow slideInDown">
-                                        <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
+                                        <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -188,7 +101,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="solar-btn about  slideInDown">
-                                        <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
+                                        <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
