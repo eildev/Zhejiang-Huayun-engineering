@@ -63,7 +63,7 @@
                         <div class="tabs_item" style="">
                             <div class="tabs-items-content">
                                 <p>
-                                    {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy ' !!}
+                                    {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy about' !!}
                                 </p>
                                 <div class="solar-btn about wow slideInDown">
                                     <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
@@ -75,7 +75,7 @@
                     <div class="tabs_item" style="display: none;">
                         <div class="tabs-items-content">
                             <p>
-                                {!! $aboutIntro->mission ?? 'Lorem Ipsum is simply dummy '!!}
+                                {!! $aboutIntro->mission ?? 'Lorem Ipsum is simply dummy mission'!!}
                             </p>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
@@ -108,7 +108,7 @@
                         <div class="tabs-items-content">
                             <div class="about-content-discription">
                                 <p>
-                                    {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy ' !!}
+                                    {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy vision' !!}
                                 </p>
                             </div>
                             <div class="row">
@@ -153,7 +153,7 @@
                             <div class="tabs-items-content">
                                 <div class="about-content-discription wow slideInLeft">
                                     <p>
-                                        {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy '!!}
+                                        {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy about'!!}
                                     </p>
                                 </div>
                                 <div class="row">
@@ -166,9 +166,9 @@
                         <!-- / tabs_item -->
                         <div class="tabs_item" style="display: none;">
                             <div class="tabs-items-content">
-                                <div class="about-content-discription wow slideInLeft">
+                                <div class="about-content-discription  slideInLeft">
                                     <p>
-                                        {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy '!!}
+                                        {!! $aboutIntro->mission ?? 'Lorem Ipsum is simply dummy mission'!!}
                                     </p>
                                 </div>
                                 <div class="row">
@@ -181,13 +181,13 @@
                         <!-- / tabs_item -->
                         <div class="tabs_item" style="display: none;">
                             <div class="tabs-items-content">
-                                <div class="about-content-discription wow slideInLeft">
+                                <div class="about-content-discription  slideInLeft">
                                     <p>
-                                        {!! $aboutIntro->vision ?? 'Lorem Ipsum is simply dummy '!!}
+                                        {!! $aboutIntro->vision ?? 'Lorem Ipsum is simply dummy vission'!!}
                                     </p>
                                 </div>
                                 <div class="row">
-                                    <div class="solar-btn about wow slideInDown">
+                                    <div class="solar-btn about  slideInDown">
                                         <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
