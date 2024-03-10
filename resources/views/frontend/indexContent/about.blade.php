@@ -13,7 +13,8 @@
             <div class="col-lg-6 col-md-12">
                 <div class="wow slideInLeft">
                     <div class="about-thumb">
-                        <img src="{{ asset('uploads/about/' . $about->image) }}" alt="">
+                    <img src="{{ optional($about)->image ? asset('uploads/about/' . $about->image) : asset('uploads/dummy.jpg') }}" alt="">
+                       
                         <div class="about-counter">
                             <div class="about-counter-text">
                                 <div class="about-numbar">
@@ -27,8 +28,9 @@
                         </div>
                         <div class="about-counter-two d-flex align-items-center ">
                             <div class="about-counter-img">
-                                <img src="{{ asset('uploads/testimonial/' . $testimonial->image) ?? '' }}"
-                                    alt="">
+                            <img src="{{ optional($testimonial)->image ? asset('uploads/testimonial/' . $testimonial->image) : asset('uploads/dummy.jpg') }}" alt="about image">
+
+                              
                             </div>
                             <div class="about-number-two">
                                 <h4 class="counter">2900</h4>
@@ -42,102 +44,14 @@
             <div class="col-lg-6 col-md-12">
                 <div class="about-section-title">
                     <div class="about-section-sub-title wow slideInUp">
-                        <h4>Our Introductton</h4>
+                        <h4>Our Introduction</h4>
                     </div>
                     <div class="about-section-main-title wow slideInRight">
-                        <h2>We're Developing Future
-                            Solar Solutions </h2>
+                        <h2>{{$about->title ?? 'Lorem Ipsum is simply dummy'}} </h2>
                     </div>
                 </div>
                 <!-- tab -->
-                {{-- <div class="tab">
-                    <ul class="tabs active wow slideInRight">
-                        <li class="current"><a href="#">About Us <i class="bi bi-arrow-up-right"></i></a></li>
-                        <li class=""><a href="#">Mission <i class="bi bi-arrow-up-right"></i></a></li>
-                        <li class=""><a href="#">Vision <i class="bi bi-arrow-up-right"></i></a></li>
-                    </ul> <!-- / tabs -->
-
-                    <div class="tab_content">
-                        <!-- / tabs_item -->
-                        <div class="tabs_item" style="">
-                            <div class="tabs-items-content">
-                                <p>
-                                    {!! $aboutIntro->about !!}
-                                </p>
-                                <div class="solar-btn about wow slideInDown">
-                                    <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / tabs_item -->
-                    <div class="tabs_item" style="display: none;">
-                        <div class="tabs-items-content">
-                            <p>
-                                {!! $aboutIntro->about !!}
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="about-list">
-                                        <ul>
-                                            <li><i class="bi bi-chevron-double-right"></i> Best Insurance Agency</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Trusted & Experience</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Key Managerial Persons</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="about-list">
-                                        <ul>
-                                            <li><i class="bi bi-chevron-double-right"></i> Dedicated Support</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Board Composition</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Board Committees Voluptat
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="solar-btn about">
-                                    <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / tabs_item -->
-                    <div class="tabs_item" style="display: none;">
-                        <div class="tabs-items-content">
-                            <div class="about-content-discription">
-                                <p>
-                                    {!! $aboutIntro->about !!}
-                                </p>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="about-list">
-                                        <ul>
-                                            <li><i class="bi bi-chevron-double-right"></i> Best Insurance Agency</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Trusted & Experience</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Key Managerial Persons</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="about-list">
-                                        <ul>
-                                            <li><i class="bi bi-chevron-double-right"></i> Dedicated Support </li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Board Composition</li>
-                                            <li><i class="bi bi-chevron-double-right"></i> Board Committees Voluptat
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="solar-btn about">
-                                    <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-
+           
                 <!-- tab -->
                 <div class="tab">
                     <ul class="tabs active wow slideInRight">
@@ -152,12 +66,12 @@
                             <div class="tabs-items-content">
                                 <div class="about-content-discription wow slideInLeft">
                                     <p>
-                                        {!! $aboutIntro->about !!}
+                                        {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy about'!!}
                                     </p>
                                 </div>
                                 <div class="row">
                                     <div class="solar-btn about wow slideInDown">
-                                        <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
+                                        <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -165,14 +79,14 @@
                         <!-- / tabs_item -->
                         <div class="tabs_item" style="display: none;">
                             <div class="tabs-items-content">
-                                <div class="about-content-discription wow slideInLeft">
+                                <div class="about-content-discription  slideInLeft">
                                     <p>
-                                        {!! $aboutIntro->mission !!}
+                                        {!! $aboutIntro->mission ?? 'Lorem Ipsum is simply dummy mission'!!}
                                     </p>
                                 </div>
                                 <div class="row">
                                     <div class="solar-btn about wow slideInDown">
-                                        <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
+                                        <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -180,14 +94,14 @@
                         <!-- / tabs_item -->
                         <div class="tabs_item" style="display: none;">
                             <div class="tabs-items-content">
-                                <div class="about-content-discription wow slideInLeft">
+                                <div class="about-content-discription  slideInLeft">
                                     <p>
-                                        {!! $aboutIntro->vision !!}
+                                        {!! $aboutIntro->vision ?? 'Lorem Ipsum is simply dummy vission'!!}
                                     </p>
                                 </div>
                                 <div class="row">
-                                    <div class="solar-btn about wow slideInDown">
-                                        <a href="#">Our Service <i class="bi bi-arrow-right"></i></a>
+                                    <div class="solar-btn about  slideInDown">
+                                        <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>

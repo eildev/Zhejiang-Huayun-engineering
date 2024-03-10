@@ -28,7 +28,7 @@ $slider = App\Models\HomeSlider::latest()->get();
 								<a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
 							</div>
 							<div class="solar-btn slider2  wow slideRight">
-								<a href="#">More About! <i class="bi bi-arrow-right"></i></a>
+								<a href="{{route('frontend.about')}}">More About! <i class="bi bi-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>

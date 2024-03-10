@@ -7,9 +7,11 @@
             <div class="col-lg-6 col-md-6">
                 <div class="solar-top-menu">
                     <ul>
-                        <!-- //	<li class="line"><a href="#"><i class="bi bi-geo-alt"></i>{{ $footer->location ?? '' }}</a></li> -->
-                        <li><a href="#"><i class="bi bi-telephone"></i> {{ $footer->phone ?? '' }}</a></li>
-                        <li><a href="#"><i class="bi bi-envelope"></i> {{ $footer->email ?? '' }}</a></li>
+
+                        <li><a href="#"><i class="bi bi-telephone"></i>{{ $footer->phone ?? '+990' }}</a></li>
+                        <li><a href="#"><i class="bi bi-envelope"></i>
+                                {{ $footer->email ?? 'example@gmail.com' }}</a></li>
+
                     </ul>
                 </div>
             </div>
