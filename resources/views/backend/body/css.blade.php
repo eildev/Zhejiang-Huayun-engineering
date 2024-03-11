@@ -33,8 +33,9 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 
-     <!-- tinymce js here -->
+    <!-- tinymce js here -->
 
 </head>
 

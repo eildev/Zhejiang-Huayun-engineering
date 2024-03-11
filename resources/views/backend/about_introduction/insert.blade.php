@@ -1,5 +1,6 @@
 @extends('backend.admin_master')
 @section('admin')
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -9,50 +10,49 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item active">
-                                    <a href="{{ route('about.intro.view') }}" class=" btn btn-sm btn-primary text-light fs-4"> +</a>
+                                    <a href="{{ route('about.intro.view') }}"
+                                        class=" btn btn-sm btn-primary text-light fs-4">
+                                        +</a>
                                 </li>
                             </ol>
                         </div>
                     </div>
                     <hr>
-                    <form action="{{ route('store.about.intro') }}" id ="myForm" method="post" >
+                    <form action="{{ route('store.about.intro') }}" id ="myForm" method="post">
                         @csrf
                         <!-- end row -->
-                      
+
                         <div class="row mb-3">
                             <label for="example-text-input" class="col-sm-2 col-form-label">About Description</label>
                             <div class="col-sm-10 form-group">
-                                <textarea class="form-control  @error('about') is-invalid  @enderror" id="summernote"
-                                     name="about" ></textarea>
-                                     @error('about')
+                                <textarea class="form-control  @error('about') is-invalid  @enderror" id="summernote" name="about"></textarea>
+                                @error('about')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
-                                    </div>
+                            </div>
                         </div>
                         <div class="row mb-3">
                             <label for="example-text-input" class="col-sm-2 col-form-label">Mission Description</label>
                             <div class="col-sm-10 form-group ">
-                                <textarea class="form-control  @error('mission') is-invalid  @enderror summernote" 
-                                     name="mission" ></textarea>
-                                     @error('mission')
+                                <textarea class="form-control  @error('mission') is-invalid  @enderror summernote" name="mission"></textarea>
+                                @error('mission')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
-                                    </div>
+                            </div>
                         </div>
                         <div class="row mb-3">
                             <label for="example-text-input" class="col-sm-2 col-form-label">Vision Description</label>
                             <div class="col-sm-10 form-group">
-                                <textarea class="form-control  @error('vision') is-invalid  @enderror" id="summernote1"
-                                     name="vision" ></textarea>
-                            
-                                     @error('vision')
+                                <textarea class="form-control  @error('vision') is-invalid  @enderror" id="summernote1" name="vision"></textarea>
+
+                                @error('vision')
                                     <span class="text-danger">{{ $message }}</span>
-                                @enderror    </div>
+                                @enderror
+                            </div>
                         </div>
+
                         <!-- end row -->
-                        
-                        <!-- end row -->
-                
+
                         <div class="row mb-3">
                             <label for="example-number-input" class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
@@ -65,45 +65,50 @@
             </div>
         </div> <!-- end col -->
     </div>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script type="text/javascript">
-    $(document).ready(function (){
-        jQuery('#myForm').validate({
-            rules: {
-                about: {
-                    required : true,
+        $(document).ready(function() {
+            jQuery('#myForm').validate({
+                rules: {
+                    about: {
+                        required: true,
+                    },
+                    mission: {
+                        required: true,
+                    },
+                    vision: {
+                        required: true,
+                    },
                 },
-                mission: {
-                    required : true,
+                messages: {
+                    about: {
+                        required: 'Please Enter About Description',
+                    },
+                    mission: {
+                        required: 'Please Enter Mission Description',
+                    },
+                    vision: {
+                        required: 'Please Enter Vision Description',
+                    },
                 },
-                vision: {
-                    required : true,
+                errorElement: 'span',
+                errorPlacement: function(error, element) {
+                    error.addClass('invalid-feedback');
+                    element.closest('.form-group').append(error);
                 },
-            },
-            messages:{
-                about: {
-                    required: 'Please Enter About Description',
+                highlight: function(element, errorClass, validClass) {
+                    $(element).addClass('is-invalid');
                 },
-                mission: {
-                    required: 'Please Enter Mission Description',
+                unhighlight: function(element, errorClass, validClass) {
+                    $(element).removeClass('is-invalid');
+                    $(element).addClass('is-valid');
                 },
-                vision: {
-                    required: 'Please Enter Vision Description',
-                },
-            },
-            errorElement : 'span',
-            errorPlacement: function (error,element) {
-                error.addClass('invalid-feedback');
-                element.closest('.form-group').append(error);
-            },
-            highlight : function(element, errorClass, validClass){
-                $(element).addClass('is-invalid');
-            },
-            unhighlight : function(element, errorClass, validClass){
-                $(element).removeClass('is-invalid');
-                $(element).addClass('is-valid');
-            },
+            });
         });
-    });
 
-</script>
+
+        var quill = new Quill('#editor', {
+            theme: 'snow'
+        });
+    </script>
 @endsection

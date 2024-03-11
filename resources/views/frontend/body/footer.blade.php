@@ -46,9 +46,9 @@
                     </div>
                     <div class="footer-wiget-contact-menu">
                         <ul>
-                            <li>{{ $footer->fullAddress ?? '' }}</li>
-                            <li>{{ $footer->phone ?? '' }}</li>
-                            <li>{{ $footer->email ?? '' }}</li>
+                            <li>{{ $footer->fullAddress ?? 'Valentin, Street Road 24, New York, USA - 67452' }}</li>
+                            <li>{{ $footer->phone ?? '(+02) 574 - 328 - 30' }}</li>
+                            <li>{{ $footer->email ?? 'example@gmail.com' }}</li>
                         </ul>
                     </div>
                 </div>
