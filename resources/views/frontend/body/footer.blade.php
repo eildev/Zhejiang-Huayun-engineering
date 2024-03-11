@@ -10,8 +10,8 @@
                         <!-- <a href="index.html"><img src="{{ asset('frontend') }}/assets/images/resource/footer-logo.png" alt=""></a> -->
                     </div>
                     <div class="footer-wiget-text">
-                        <p>Feugiat a ligula rutrum luctus primis ultrice nteger congue magna at pretium purus a pretium
-                            ligula rutrum and luctus risus</p>
+                        <p style="text-align: justify;" >Zhejiang Huayun Electric Power Engineering Design & Consultation Co., Ltd. is dedicated to excellent design, customer satisfaction, and innovative development. 
+                        We focus on creating resource-saving, environment-friendly projects.</p>
                     </div>
                     <div class="footer-wiget-social">
                         <ul>
