@@ -8,7 +8,6 @@
     $experience1 = App\Models\SectionDetails::where('section_id', $section->id)
         ->latest()
         ->first();
-   
 @endphp
 <div class="protfolio-section">
     <div class="container">

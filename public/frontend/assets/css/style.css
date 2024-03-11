@@ -1858,7 +1858,7 @@ a.active {
     margin-bottom: 30px;
 }
 
-.offer-items-box::before {
+/* .offer-items-box::before {
     position: absolute;
     content: "";
     top: 0;
@@ -1871,7 +1871,7 @@ a.active {
     z-index: -1;
     transition: .5s;
     border-radius: 3px;
-}
+} */
 
 .offer-items-box:hover::before {
     width: 100%;
