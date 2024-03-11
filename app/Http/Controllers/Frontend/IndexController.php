@@ -96,6 +96,10 @@ class IndexController extends Controller
   public function ProjectDetails($id){
     $projectDetail = Section::findOrFail($id);
     return view('frontend.project.single_project',compact('projectDetail'));
+  }//
+  //404 page
+  public function Error404(){
+    return view('frontend.errors.404');
   }
 
 }

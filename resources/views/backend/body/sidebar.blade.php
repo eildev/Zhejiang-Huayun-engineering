@@ -20,10 +20,12 @@
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li class="menu-title">Menu</li>
-
+@php 
+$message = App\Models\Contact::all();
+@endphp
                 <li>
                     <a href="{{ route('admin.dashboard') }}" class="waves-effect">
-                        <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
+                        <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">{{count($message)}}</span>
                         <span>Dashboard</span>
                     </a>
                 </li>

@@ -13,11 +13,11 @@ $footer = App\Models\FooterSetting::all()->first();
 							<h4>Why Choose Us</h4>
 						</div>
 						<div class="section-main-title choose">
-							<h2>{{$chooseUs->title}}</h2>
+							<h2>{{$chooseUs->title ?? 'Lorem Ipsum is simply dummy '}}</h2>
 						</div>
 					</div>
 					<div class="choose-us-discription wow animate__slideInUp">
-						<p>{!!$chooseUs->description!!}</p>
+						<p>{!!$chooseUs->description ?? 'Lorem Ipsum is simply dummy '!!}</p>
 					</div>
 					<div class="choose-us-content wow animate__zoomIn">
 						<div class="choose-us-info">
@@ -28,7 +28,7 @@ $footer = App\Models\FooterSetting::all()->first();
 								<i class="bi bi-telephone-plus"></i>
 							</div>
 							<div class="choose-us-phone">
-								<h5>Emergency Call <span>{{$footer->phone}}</span></h5>
+								<h5>Emergency Call <span>{{$chooseUs->phone ?? 'Lorem Ipsum is simply dummy'}}</span></h5>
 							</div>
 						</div>
 					</div>

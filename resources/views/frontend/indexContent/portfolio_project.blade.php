@@ -17,14 +17,16 @@ $section1 = App\Models\Section::all()->first();
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-6">
 					<div class="solar-btn protfolio">
-						<a href="project-details.html">All  Projects <i class="bi bi-arrow-right"></i></a>
+						<a href="{{route('all.project')}}">All  Projects <i class="bi bi-arrow-right"></i></a>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-6 col-md-6">
 					<div class="protfolio-thumb wow animate__zoomIn">
-						<img src="{{asset('uploads/section/'.$section1->image)}}" width="598px" height="483px" alt="">
+					<img src="{{ optional($section1)->image ? asset('uploads/section/' . $section1->image) : asset('uploads/dummy.jpg') }}" width="598px" height="483px" alt="">
+
+						
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">
@@ -37,8 +39,8 @@ $section1 = App\Models\Section::all()->first();
 								<span>{{$key+1}}</span>
 							</div>
 							<div class="protfolio-item-title">
-								<h3>{{$sec->title}}</h3>
-								<h3>{{$sec->desciption}}</h3>
+								<h3>{{$sec->title ?? 'Lorem Ipsum is simply dummy'}}</h3>
+								<h3>{{$sec->desciption ?? 'Lorem Ipsum is simply dummy'}}</h3>
 							</div>
 						</div>
 						<div class="protfolio-itme-hover">

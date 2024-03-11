@@ -46,7 +46,7 @@
                     <h4 class="text-muted text-center font-size-18"><b>Admin Sign In</b></h4>
 
                     <div class="p-3">
-                        <form method="POST" action="{{ route('login') }}">
+                        <form method="POST" action="{{ route('login.store') }}">
                             @csrf
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
