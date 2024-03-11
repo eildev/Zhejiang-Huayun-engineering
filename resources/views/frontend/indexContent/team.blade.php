@@ -30,10 +30,10 @@ $teams = App\Models\ManagingTeams::latest()->limit(4)->get();
 								</ul>
 							</div>
 							<div class="team-main-icon">
-								<a href="{{route('team.details',$team->id)}}"><i class="bi bi-plus"></i></a>
+								<a href="#"><i class="bi bi-plus"></i></a>
 							</div>
 							<div class="team-content">
-								<h4><a href="{{route('team.details',$team->id)}}">{{$team->name ?? 'Lorem Ipsum '}}</a></h4>
+								<h4><a href="#">{{$team->name ?? 'Lorem Ipsum '}}</a></h4>
 								<span>{{$team->designation ?? 'Lorem Ipsum is '}}</span>
 							</div>
 						</div>

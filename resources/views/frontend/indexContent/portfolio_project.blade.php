@@ -1,6 +1,6 @@
 @php
     $section = App\Models\Section::where('title', 'Experience')->first();
-    // dd($section->all());
+ 
     $experience = App\Models\SectionDetails::where('section_id', $section->id)
         ->latest()
         ->limit(4)
@@ -8,7 +8,6 @@
     $experience1 = App\Models\SectionDetails::where('section_id', $section->id)
         ->latest()
         ->first();
-    // dd($experience->all());
 @endphp
 <div class="protfolio-section">
     <div class="container">

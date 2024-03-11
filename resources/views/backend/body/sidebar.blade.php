@@ -30,7 +30,7 @@ $message = App\Models\Contact::all();
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
                         <span>Home Settings</span>
@@ -39,7 +39,7 @@ $message = App\Models\Contact::all();
                         <li><a href="{{ route('home.settings') }}">Add Home Settings</a></li>
                         <li><a href="{{ route('manage.home.settings') }}">Manage Home Settings</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -161,7 +161,7 @@ $message = App\Models\Contact::all();
                         <li><a href="{{ route('manage.overview') }}">Manage Overview</a></li>
                     </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
                         <span>News</span>
@@ -170,7 +170,7 @@ $message = App\Models\Contact::all();
                         <li><a href="{{ route('news') }}">Add News</a></li>
                         <li><a href="{{ route('manage.news') }}">Manage News</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>

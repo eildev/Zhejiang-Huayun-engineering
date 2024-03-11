@@ -1,6 +1,6 @@
-@extends('frontend.frontend_master')
-@section('content')
-<div class="breatcome-section">
+<!-- @extends('frontend.frontend_master')
+@section('content') -->
+<!-- <div class="breatcome-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-12">
@@ -18,9 +18,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	
-	<div class="team-details-section">
+	<!-- <div class="team-details-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-xxl-8 col-xl-8">
@@ -80,10 +80,10 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- /. team details author skill -->
-				</div>
-			
+				<!-- </div> -->
+<!-- 			
 			</div>
 			<div class="row">
 				<div class="col-lg-6 col-md-12">
@@ -95,7 +95,7 @@
 							<p>{!!$teamDetails->full_discription!!}</p>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<!-- <div class="col-lg-6 col-md-12">
 					<div class="choose-contact-box inner team">
 						<div class="choose-contact-title inner team">
@@ -138,8 +138,8 @@
 						<div id="status"></div>
 					</div>
 				</div> -->
-			</div>
+			<!-- </div>
 		</div>
-	</div>
+	</div> -->
 
-@endsection
+<!-- @endsection -->

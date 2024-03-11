@@ -28,7 +28,7 @@
                             <th>Section Name</th>
                             <th>Title</th>
                             <th>Description</th>
-                            <th> All Image</th>
+                            <th>All Image</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -37,7 +37,7 @@
                         @foreach ($sectionDetails as $key => $item)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
-                                {{-- <td>{{$item['section']['title']}}</td> --}}
+                              <td>{{$item['section']['title']}}</td> 
                                 <td>{{ $item->title }}</td>
                                 <td>{!! $item->desciption !!}</td>
                                 <td>
