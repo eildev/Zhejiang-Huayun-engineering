@@ -12,6 +12,10 @@ use App\Models\SectionDetails;
 
 use App\Models\ManagingTeams;
 use App\Models\Section;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55b40803b71f94594764863d455f22c74a65647a
 use Carbon\Carbon;
 
 class IndexController extends Controller
