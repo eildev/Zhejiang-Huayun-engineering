@@ -13,12 +13,13 @@
             <div class="col-lg-6 col-md-12">
                 <div class="wow slideInLeft">
                     <div class="about-thumb">
-                    <img src="{{ optional($about)->image ? asset('uploads/about/' . $about->image) : asset('uploads/dummy.jpg') }}" alt="">
-                       
+                        <img src="{{ optional($about)->image ? asset('uploads/about/' . $about->image) : asset('uploads/dummy.jpg') }}"
+                            alt="">
+
                         <div class="about-counter">
                             <div class="about-counter-text">
                                 <div class="about-numbar">
-                                    <h4 class="counter">29</h4>
+                                    <h4 class="counter">37</h4>
                                     <span>+</span>
                                 </div>
                                 <div class="about-text">
@@ -28,9 +29,10 @@
                         </div>
                         <div class="about-counter-two d-flex align-items-center ">
                             <div class="about-counter-img">
-                            <img src="{{ optional($testimonial)->image ? asset('uploads/testimonial/' . $testimonial->image) : asset('uploads/dummy.jpg') }}" alt="about image">
+                                <img src="{{ optional($testimonial)->image ? asset('uploads/testimonial/' . $testimonial->image) : asset('uploads/dummy.jpg') }}"
+                                    alt="about image">
 
-                              
+
                             </div>
                             <div class="about-number-two">
                                 <h4 class="counter">2900</h4>
@@ -47,11 +49,11 @@
                         <h4>Our Introduction</h4>
                     </div>
                     <div class="about-section-main-title wow slideInRight">
-                        <h2>{{$about->title ?? 'Lorem Ipsum is simply dummy'}} </h2>
+                        <h2>{{ $about->title ?? 'Lorem Ipsum is simply dummy' }} </h2>
                     </div>
                 </div>
                 <!-- tab -->
-           
+
                 <!-- tab -->
                 <div class="tab">
                     <ul class="tabs active wow slideInRight">
@@ -66,12 +68,13 @@
                             <div class="tabs-items-content">
                                 <div class="about-content-discription wow slideInLeft">
                                     <p>
-                                        {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy about'!!}
+                                        {!! $aboutIntro->about ?? 'Lorem Ipsum is simply dummy about' !!}
                                     </p>
                                 </div>
                                 <div class="row">
                                     <div class="solar-btn about wow slideInDown">
-                                        <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
+                                        <a href="{{ route('all.service') }}">Our Service <i
+                                                class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -81,12 +84,13 @@
                             <div class="tabs-items-content">
                                 <div class="about-content-discription  slideInLeft">
                                     <p>
-                                        {!! $aboutIntro->mission ?? 'Lorem Ipsum is simply dummy mission'!!}
+                                        {!! $aboutIntro->mission ?? 'Lorem Ipsum is simply dummy mission' !!}
                                     </p>
                                 </div>
                                 <div class="row">
                                     <div class="solar-btn about wow slideInDown">
-                                        <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
+                                        <a href="{{ route('all.service') }}">Our Service <i
+                                                class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -96,12 +100,13 @@
                             <div class="tabs-items-content">
                                 <div class="about-content-discription  slideInLeft">
                                     <p>
-                                        {!! $aboutIntro->vision ?? 'Lorem Ipsum is simply dummy vission'!!}
+                                        {!! $aboutIntro->vision ?? 'Lorem Ipsum is simply dummy vission' !!}
                                     </p>
                                 </div>
                                 <div class="row">
                                     <div class="solar-btn about  slideInDown">
-                                        <a href="{{route('all.service')}}">Our Service <i class="bi bi-arrow-right"></i></a>
+                                        <a href="{{ route('all.service') }}">Our Service <i
+                                                class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>

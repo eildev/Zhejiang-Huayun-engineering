@@ -14,7 +14,7 @@
         </div>
         <div class="ms-auto">
             <div class="btn-group">
-                <a href="{{route('add.section.details')}}" class="btn btn-sm btn-primary text-light fs-4">+</a>
+                <a href="{{ route('add.section.details') }}" class="btn btn-sm btn-primary text-light fs-4">+</a>
             </div>
         </div>
     </div>
@@ -35,21 +35,25 @@
                     <tbody>
 
                         @foreach ($sectionDetails as $key => $item)
-                        <tr>
-                            <td>{{$key+1}}</td>
-                            <td>{{$item['section']['title']}}</td>
-                            <td>{{$item->title}}</td>
-                            <td>{!!$item->desciption!!}</td>
-                            <td>
-                            @foreach(explode(',', $item->multi_image) as $image)
-                            <img style="height: 60px; width:60px; margin-right: 5px;" src="{{ asset('uploads/multi_img/' . $image) }}" alt="Image">
-                            @endforeach
-                            </td>
-                            <td>
-                                <a class="btn btn-sm btn-warning" href="{{route('edit.section.details',$item->id)}}">Edit</a>
+                            <tr>
+                                <td>{{ $key + 1 }}</td>
+                                {{-- <td>{{$item['section']['title']}}</td> --}}
+                                <td>{{ $item->title }}</td>
+                                <td>{!! $item->desciption !!}</td>
+                                <td>
+                                    @foreach (explode(',', $item->multi_image) as $image)
+                                        <img style="height: 60px; width:60px; margin-right: 5px;"
+                                            src="{{ asset('uploads/multi_img/' . $image) }}" alt="Image">
+                                    @endforeach
+                                </td>
+                                <td>
+                                    <a class="btn btn-sm btn-warning"
+                                        href="{{ route('edit.section.details', $item->id) }}">Edit</a>
 
-                            <a href="{{route('delete.section.details',$item->id)}}" id="delete" class="btn btn-sm btn-danger">Delete</a></td>
-                        </tr>
+                                    <a href="{{ route('delete.section.details', $item->id) }}" id="delete"
+                                        class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>
