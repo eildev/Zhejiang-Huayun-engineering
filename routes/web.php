@@ -267,7 +267,7 @@ Route::controller(IndexController::class)->group(function () {
     Route::get('/service-details/{id}', 'ServiceDetails')->name('service.details');
     //Team 
     Route::get('/all-team', 'AllTeam')->name('all.team');
-    Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
+   // Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
     // All Project /Section
     Route::get('/all-project', 'AllProject')->name('all.project');
     Route::get('/project-details/{id}', 'ProjectDetails')->name('project.details');

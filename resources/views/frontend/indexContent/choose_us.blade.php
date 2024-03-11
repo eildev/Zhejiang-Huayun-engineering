@@ -28,7 +28,7 @@ $footer = App\Models\FooterSetting::all()->first();
 								<i class="bi bi-telephone-plus"></i>
 							</div>
 							<div class="choose-us-phone">
-								<h5>Emergency Call <span>{{$chooseUs->phone ?? 'Lorem Ipsum is simply dummy'}}</span></h5>
+								<h5>Emergency Call <span>{{$footer->phone?? 'Lorem Ipsum is simply dummy'}}</span></h5>
 							</div>
 						</div>
 					</div>

@@ -32,7 +32,7 @@
                             @foreach ($servicesDetails as $key => $item)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td>{{$item['Service']['services_title']}}</td>
+                        <td>{{$item['Service']['services_title']}}</td>
                                 <td>{{$item->services_details_title}}</td>
                                 <td>{!!$item->services_details_description!!}</td>
                                 <td><img style="height: 60px; width:60px" src="{{asset('uploads/services_image/'.$item->services_details_icon)}}" alt=""></td>

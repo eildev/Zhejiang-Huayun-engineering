@@ -26,30 +26,6 @@
     <!--End Solar Panel  slider Section  -->
     <!--==================================================-->
     <div class="project-grid-section">
-<<<<<<< HEAD
-		<div class="container">
-			
-			<div class="row image_load ">
-                    @foreach($projects as $project)
-                    <a href="{{route('project.details',$project->id)}}">
-				<div class="col-lg-4 col-md-6 grid-item physics math m-1 mb-30">
-					<div class="project-grid-box">
-						<div class="project-thumb">
-							<img src="{{asset('uploads/section/'.$project->image)}}" height="280px" width="280px" alt="project">
-						</div>
-						<div class="project-content">
-							<h4>{!! Str::limit(strip_tags($project->title), 35, '...')!!}</h4>
-							<span>{!! Str::limit(strip_tags($project->description), 40, '...')!!}</span>
-						</div>
-					</div>
-				</div>
-                </a>
-                @endforeach
-			</div>
-		</div>
-	</div>
-@endsection
-=======
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -158,4 +134,3 @@
     <!-- End Solar Panel  Project Grid  Section -->
     <!--==================================================-->
 @endsection
->>>>>>> 772ddd2551eb827d24e5ac859190b707231179cd

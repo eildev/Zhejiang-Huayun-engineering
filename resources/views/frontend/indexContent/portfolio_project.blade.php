@@ -39,7 +39,7 @@ $section1 = App\Models\Section::all()->first();
 								<span>{{$key+1}}</span>
 							</div>
 							<div class="protfolio-item-title">
-								<h3>{{$sec->title ?? 'Lorem Ipsum is simply dummy'}}</h3>
+								<h3>{{$sec->title ?? 'Lorem Ipsum is simply dummy' }}</h3>
 								<h3>{{$sec->desciption ?? 'Lorem Ipsum is simply dummy'}}</h3>
 							</div>
 						</div>
