@@ -12,7 +12,7 @@ use App\Models\SectionDetails;
 
 use App\Models\ManagingTeams;
 use App\Models\Section;
-use App\Models\SectionDetails;
+
 use Carbon\Carbon;
 
 class IndexController extends Controller
