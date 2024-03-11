@@ -273,7 +273,8 @@ Route::controller(IndexController::class)->group(function () {
     Route::get('/project-details/{id}', 'ProjectDetails')->name('project.details');
     //404 page
     Route::get('/404-page', 'Error404')->name('404.error');
-
+    //achievements Details
+    Route::get('/achievements-details/{id}', 'AchievementsDetails')->name('achiements.details');
 });
 //////////////////////////////////// End Frontend Code //////////////////////////////////
 

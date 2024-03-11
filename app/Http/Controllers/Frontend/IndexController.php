@@ -8,6 +8,8 @@ use App\Models\HomeSlider;
 use App\Models\Subscribe;
 use App\Models\Contact;
 use App\Models\ServicesDetails;
+use App\Models\SectionDetails;
+
 use App\Models\ManagingTeams;
 use App\Models\Section;
 use Carbon\Carbon;
@@ -101,5 +103,9 @@ class IndexController extends Controller
   public function Error404(){
     return view('frontend.errors.404');
   }
-
+  ///Achievments
+  public function AchievementsDetails($id){
+    $achievements = SectionDetails::findorFail($id);
+    return view('frontend.achievments.achievments',compact('achievements'));
+  }
 }

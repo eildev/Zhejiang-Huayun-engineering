@@ -28,12 +28,14 @@ $achievement1 = App\Models\SectionDetails::where('section_id', $section->id)
                     @php
                          $image = explode(',', $item->multi_image);
                       @endphp
+                      <a href="{{route('achiements.details',$item->id)}}">
                         <div class="offer-items-box wow animate__slideInDown"  style="background-image: url({{ asset('uploads/multi_img/' . $image[0]) }})!important; height:200px;width:200px">
                             <div class="offer-content">
                                 <h5> {{ Illuminate\Support\Str::limit($item->title, 20) }}</h4>
                                 <p>{!! Illuminate\Support\Str::limit($item->desciption, 40) !!}</p>
                             </div>
                         </div>
+                        </a>
                     </div>
                   @endforeach
 						
