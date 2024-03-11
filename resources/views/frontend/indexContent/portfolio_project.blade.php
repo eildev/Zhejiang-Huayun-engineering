@@ -19,7 +19,7 @@
                         <h4>What We Project</h4>
                     </div>
                     <div class="section-main-title protfolio ">
-                        <h2>{{ $experience1->title }}</h2>
+                        <h2>{{ $experience[0]->title }}</h2>
                     </div>
                 </div>
             </div>
@@ -30,15 +30,17 @@
             </div>
         </div>
         <div class="row">
+            @php
+                $project_img = explode(',', $experience[0]->multi_image);
+            @endphp
             <div class="col-lg-6 col-md-6">
                 <div class="protfolio-thumb wow animate__zoomIn">
-                    @php
-                        // dd($experience1->multi_image);
-                        $project_img = explode(',', $experience1->multi_image);
-                        // dd($project_img);
-                    @endphp
-                    <img src="{{ asset('uploads/multi_img/' . $project_img[0]) }}" width="598px" height="483px"
-                        alt="">
+                    @if (isset($project_img[0]) && file_exists(public_path('uploads/multi_img/' . $project_img[0])))
+                        <img src="{{ asset('uploads/multi_img/' . $project_img[0]) }}" width="598px" height="483px"
+                            alt="">
+                    @else
+                        <img src="{{ asset('uploads/dummy.jpg') }}" width="598px" height="483px" alt="">
+                    @endif
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">

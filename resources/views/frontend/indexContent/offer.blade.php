@@ -4,7 +4,7 @@
             <div class="col-lg-7 col-md-12">
                 <div class="section-title wow animate__slideInUp">
                     <div class="section-sub-title offer">
-                        <h4>What We Offer</h4>
+                        <h4>Our Achivement</h4>
                     </div>
                     <div class="section-main-title offer">
                         <h2>Taking The Effort Out Of</h2>

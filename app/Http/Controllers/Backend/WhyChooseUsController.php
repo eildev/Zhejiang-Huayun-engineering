@@ -44,31 +44,12 @@ class WhyChooseUsController extends Controller
         $why_chose_us->sub_title = $request->sub_title;
         $why_chose_us->description = $request->description;
         $why_chose_us->update();
-        // if ($request->icon) {
-        //     $iconName = rand() . '.' . $request->icon->extension();
-        //     $request->icon->move(public_path('uploads/why-choose-us/'), $iconName);
-        //     $details = WhyChooseUsDetails::where('why_id', $id)->latest()->first();
-        //     unlink(public_path('uploads/why-choose-us/') . $details->icon);
-        //     $details->why_id = $why_chose_us->id;
-        //     $details->title = $request->details_title;
-        //     $details->description = $request->details_description;
-        //     $details->icon = $iconName;
-        //     $details->update();
-        // } else {
-        //     $details = new WhyChooseUsDetails;
-        //     $details->why_id = $why_chose_us->id;
-        //     $details->title = $request->details_title;
-        //     $details->description = $request->details_description;
-        //     $details->update();
-        // }
         return redirect()->route('manage.why-choose-us')->with('success', 'Why Choose Us Successfully Updated');
     }
 
     public function delete($id)
     {
         $why_chose_us = WhyChooseUs::findOrFail($id);
-        // $details = WhyChooseUsDetails::where('why_id', $id)->latest()->first();
-        // unlink(public_path('uploads/why-choose-us/') . $details->icon);
         $why_chose_us->delete();
         return back()->with('message', 'Why Choose Us icon Successfully deleted');
     }
@@ -97,16 +78,19 @@ class WhyChooseUsController extends Controller
         $request->validate([
             'title' => 'required|max:100',
             'description' => 'required',
-            'icon' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'icon' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
         if ($request->icon) {
             $iconName = rand() . '.' . $request->icon->extension();
             $request->icon->move(public_path('uploads/why-choose-us/'), $iconName);
+            $imageName = rand() . '.' . $request->image->extension();
+            $request->image->move(public_path('uploads/why-choose-us/details/'), $imageName);
             $details = new WhyChooseUsDetails;
             $details->why_id = $request->why_id;
             $details->title = $request->title;
             $details->description = $request->description;
             $details->icon = $iconName;
+            $details->image = $imageName;
             $details->save();
             return back()->with('message', 'Why Choose Us Successfully Saved');
         }
@@ -123,26 +107,38 @@ class WhyChooseUsController extends Controller
     }
     public function detailsUpdate(Request $request, $id)
     {
+        $request->validate([
+            'icon' => 'sometimes|required',
+            'image' => 'sometimes|required',
+            'title' => 'required',
+            'description' => 'required',
+        ]);
 
-        if ($request->icon) {
-            $iconName = rand() . '.' . $request->icon->extension();
-            $request->icon->move(public_path('uploads/why-choose-us/'), $iconName);
-            $details = WhyChooseUsDetails::findOrFail($id);
-      //      unlink(public_path('uploads/why-choose-us/') . $details->icon);
-            $details->why_id =  $request->why_id;
-            $details->title = $request->title;
-            $details->description = $request->description;
+        $details = WhyChooseUsDetails::findOrFail($id);
+        $details->why_id = $request->why_id;
+        $details->title = $request->title;
+        $details->description = $request->description;
+
+        if ($request->hasFile('icon')) {
+            $iconName = rand() . '.' . $request->file('icon')->extension();
+            $request->file('icon')->move(public_path('uploads/why-choose-us/'), $iconName);
+            @unlink(public_path('uploads/why-choose-us/' . $details->icon));
             $details->icon = $iconName;
-            $details->update();
-        } else {
-            $details = new WhyChooseUsDetails;
-            $details->why_id =  $request->why_id;
-            $details->title = $request->title;
-            $details->description = $request->description;
-            $details->update();
         }
+
+        if ($request->hasFile('image')) {
+            $imageName = rand() . '.' . $request->file('image')->extension();
+            $request->file('image')->move(public_path('uploads/why-choose-us/details/'), $imageName);
+            @unlink(public_path('uploads/why-choose-us/details/' . $details->image));
+            $details->image = $imageName;
+        }
+
+        $details->update();
+
         return redirect()->route('manage.why-choose-us-details')->with('success', 'Why Choose Us Successfully Updated');
     }
+
+
 
     public function detailsDelete($id)
     {

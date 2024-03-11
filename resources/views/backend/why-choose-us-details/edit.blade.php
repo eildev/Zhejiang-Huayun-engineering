@@ -38,7 +38,7 @@
                                 <div class="col-sm-10">
                                     <select class="form-select @error('why_id') is-invalid  @enderror" name="why_id"
                                         aria-label="Default select example">
-                                        <option selected="" value=""> Select Why Title</option>
+                                        <option selected="" value="{{ $data->why_id }}">Select </option>
                                         @foreach ($why as $whyData)
                                             <option value="{{ $whyData->id }}">{{ $whyData->title }}</option>
                                         @endforeach
@@ -58,8 +58,7 @@
                             <div class="row mb-3">
                                 <label for="example-search-input" class="col-sm-2 col-form-label">Description</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control" rows="5" maxlength="250" placeholder="Message" name="description"
-                                    id="summernote">{!! $data->description ?? '' !!}</textarea>
+                                    <textarea class="form-control" rows="5" maxlength="250" placeholder="Message" name="description" id="summernote">{!! $data->description ?? '' !!}</textarea>
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -77,6 +76,26 @@
                                         src="{{ asset('uploads/why-choose-us/' . $data->icon) }}" alt="About Image"
                                         name="">
                                     @error('icon')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <!-- end row -->
+                            <div class="row mb-3">
+                                <label for="example-input" class="col-sm-2 col-form-label">Image</label>
+                                <div class="col-sm-10">
+                                    <input name="image" class="form-control @error('image') is-invalid  @enderror"
+                                        type="file" id="image2">
+                                </div>
+                            </div>
+                            <!-- end row -->
+                            <div class="row mb-3">
+                                <label for="example-url-input" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10">
+                                    <img id="showImage2" class="rounded avatar-lg "
+                                        src="{{ asset('uploads/why-choose-us/details' . $data->icon ?? '') }}"
+                                        alt="About Image" name="">
+                                    @error('image')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
