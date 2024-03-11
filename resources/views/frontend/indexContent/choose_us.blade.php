@@ -1,7 +1,9 @@
 @php
 
 $chooseUs = App\Models\WhyChooseUsDetails::all()->first();
+$footer = App\Models\FooterSetting::all()->first();
 @endphp
+
 <div class="choose-us-section mt-5">
 		<div class="container">
 			<div class="row choose" style="background-image: url({{asset('uploads/why-choose-us/choose-bg.png')}})!important;">
@@ -26,7 +28,7 @@ $chooseUs = App\Models\WhyChooseUsDetails::all()->first();
 								<i class="bi bi-telephone-plus"></i>
 							</div>
 							<div class="choose-us-phone">
-								<h5>Emergency Call <span>+123956(6565)556-02</span></h5>
+								<h5>Emergency Call <span>{{$footer->phone}}</span></h5>
 							</div>
 						</div>
 					</div>

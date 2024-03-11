@@ -25,10 +25,10 @@
     <div class="project-grid-section">
 		<div class="container">
 			
-			<div class="row image_load">
+			<div class="row image_load ">
                     @foreach($projects as $project)
                     <a href="{{route('project.details',$project->id)}}">
-				<div class="col-lg-4 col-md-6 grid-item physics math mb-30">
+				<div class="col-lg-4 col-md-6 grid-item physics math m-1 mb-30">
 					<div class="project-grid-box">
 						<div class="project-thumb">
 							<img src="{{asset('uploads/section/'.$project->image)}}" height="280px" width="280px" alt="project">

@@ -7,9 +7,10 @@ $footer = App\Models\FooterSetting::all()->first();
 				<div class="col-lg-6 col-md-6">
 					<div class="solar-top-menu">
 						<ul>
-						<!-- //	<li class="line"><a href="#"><i class="bi bi-geo-alt"></i>{{$footer->location}}</a></li> -->
+					
 							<li><a href="#"><i class="bi bi-telephone"></i> {{$footer->phone}}</a></li>
 							<li><a href="#"><i class="bi bi-envelope"></i> {{$footer->email}}</a></li>
+							<span style="color: white;"><i class="bi bi-geo-alt" style="color: white;"></i>{{$footer->location}}</span>
 						</ul>
 					</div>
 				</div>

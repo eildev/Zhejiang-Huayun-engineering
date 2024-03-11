@@ -15,7 +15,7 @@ $testimonial = App\Models\Testimonial::all()->first();
 									<div class="about-numbar">
 										<h4 class="counter">29</h4>
 										<span>+</span>
-									</div>
+									</div>    
 									<div class="about-text">
 										<h5>Years Exprience</h5>
 									</div>

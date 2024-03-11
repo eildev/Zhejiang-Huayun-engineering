@@ -26,7 +26,7 @@
 			<div class="row">
 				<div class="col-lg-12 text-center">
 					<div class="error-thumb mb-60">
-						<img src="assets/images/resource/error-thumb.png" alt="">
+						<img src="{{asset('frontend')}}/assets/images/resource/error-thumb.png" alt="">
 					</div>
 					<div class="solar-btn text-center">
 						<a href="">Go To Home <i class="bi bi-arrow-right"></i></a>

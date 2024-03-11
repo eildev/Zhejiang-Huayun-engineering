@@ -11,7 +11,6 @@
 					<div class="solar-menu">
 						<ul>
 							<li><a href="{{url('/')}}">Home </a>
-							
 							</li>
 							<li><a href="{{route('frontend.about')}}">About</a></li>
 							<li><a href="{{route('all.service')}}">Our Services</a>
@@ -20,7 +19,6 @@
 								
 							</li>
 							<li><a href="{{route('all.team')}}">Team </a>
-								
 							</li>
 							<li><a href="{{route('contact.us')}}">Contacts</a></li>
 						</ul>

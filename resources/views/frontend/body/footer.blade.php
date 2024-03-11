@@ -25,15 +25,16 @@ $footer = App\Models\FooterSetting::all()->first();
 				<div class="col-lg-4 col-md-6">
 					<div class="footer-wiget wow animate__slideInDown">
 						<div class="footer-wiget-title">
-							<h4>Industry Sectors</h4>
+							<h4>Quick Links</h4>
 						</div>
 						<div class="footer-wiget-menu">
 							<ul>
-								<li><a href="#">Contact us</a></li>
-								<li><a href="#">How it Works</a></li>
-								<li><a href="#"> Office Create</a></li>
-								<li><a href="#">Residential Explore</a></li>
-								<li><a href="#">Terms & Services</a></li>
+								<li><a href="{{url('/')}}">Home</a></li>
+								<li><a href="{{route('frontend.about')}}">About Us</a></li>
+								<li><a href="{{route('all.service')}}">Our Services</a></li>
+								<li><a href="{{route('all.project')}}">Our Team</a></li>
+								<li><a href="{{route('all.team')}}">Our Projects</a></li>
+								<li><a href="{{route('contact.us')}}">Contact us</a></li>
 							</ul>
 						</div>
 					</div>
