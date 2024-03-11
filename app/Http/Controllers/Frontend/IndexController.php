@@ -12,14 +12,18 @@ use App\Models\SectionDetails;
 
 use App\Models\ManagingTeams;
 use App\Models\Section;
+use App\Models\SectionDetails;
 use Carbon\Carbon;
+
 class IndexController extends Controller
 {
-  public function ContactUs(){
+  public function ContactUs()
+  {
     return view('frontend.contact_us.contact');
-  }//
+  } //
 
-  public function Subscribe(Request $request){
+  public function Subscribe(Request $request)
+  {
     Subscribe::insert([
       'email' => $request->email,
       'created_at' => Carbon::now(),
@@ -27,80 +31,93 @@ class IndexController extends Controller
     $notification = array(
       'message' => 'Thank you for subscribing! Welcome to our community',
       'alert-type' => 'info'
-  );
+    );
     return redirect()->back()->with($notification);
-  }//
-  public function SubscribeList(){
+  } //
+  public function SubscribeList()
+  {
     $subscribe = Subscribe::all();
-    return view('backend.subscribe.subscribe',compact('subscribe'));
-  }//
-  public function SubscribeDelete($id){
+    return view('backend.subscribe.subscribe', compact('subscribe'));
+  } //
+  public function SubscribeDelete($id)
+  {
     Subscribe::findOrFail($id)->delete();
     $notification = array(
-    'message' => 'Subscribe Successfully Deleted',
+      'message' => 'Subscribe Successfully Deleted',
       'alert-type' => 'info'
     );
     return redirect()->back()->with($notification);
-  }//
-   public function ContactStore(Request $request){
+  } //
+  public function ContactStore(Request $request)
+  {
     Contact::insert([
       'name' => request('name'),
       'email' => request('email'),
       'number' => request('phone'),
       'service_name' => request('service_name'),
       'company_name' => request('company_name'),
-       'message' => request('message'),
-       'created_at' => Carbon::now(),
+      'message' => request('message'),
+      'created_at' => Carbon::now(),
     ]);
     $notification = array(
       'message' => 'Thank you, ' . request('name') . '! Your message has been successfully received. We appreciate your communication.',
       'alert-type' => 'success'
-  );
-      return redirect()->back()->with($notification);
-  }//
-  public function ContactList(){
+    );
+    return redirect()->back()->with($notification);
+  } //
+  public function ContactList()
+  {
     $contact = Contact::all();
-    return view('backend.contact.contact_list',compact('contact'));
-  }//
-  public function ContactDelete($id){
+    return view('backend.contact.contact_list', compact('contact'));
+  } //
+  public function ContactDelete($id)
+  {
     Contact::findOrFail($id)->delete();
     $notification = array(
-   'message' => 'Contact Successfully Deleted',
+      'message' => 'Contact Successfully Deleted',
       'alert-type' => 'info'
     );
     return redirect()->back()->with($notification);
-  }//
+  } //
 
   // About
-  public function FrontendAbout(){
+  public function FrontendAbout()
+  {
     return view('frontend.about.about');
-  }//
+  } //
   ///All Service
-  public function AllService(){
+  public function AllService()
+  {
     return view('frontend.service.service');
   }
-  public function ServiceDetails($id){
+  public function ServiceDetails($id)
+  {
     $serviceDetails = ServicesDetails::findOrFail($id);
-    return view('frontend.service.single_service',compact('serviceDetails'));
-  }//
+    return view('frontend.service.single_service', compact('serviceDetails'));
+  } //
   ///Team
-  public function AllTeam(){
+  public function AllTeam()
+  {
     return view('frontend.team.all_team');
   }
-  public function TeamDetails($id){
+  public function TeamDetails($id)
+  {
     $teamDetails = ManagingTeams::findOrFail($id);
-    return view('frontend.team.single_team',compact('teamDetails'));
-  }//
+    return view('frontend.team.single_team', compact('teamDetails'));
+  } //
   //Project
-  public function AllProject(){
+  public function AllProject()
+  {
     return view('frontend.project.all_project');
-  }//
-  public function ProjectDetails($id){
-    $projectDetail = Section::findOrFail($id);
-    return view('frontend.project.single_project',compact('projectDetail'));
-  }//
+  } //
+  public function ProjectDetails($id)
+  {
+    $projectDetails = SectionDetails::findOrFail($id);
+    return view('frontend.project.single_project', compact('projectDetails'));
+  } //
   //404 page
-  public function Error404(){
+  public function Error404()
+  {
     return view('frontend.errors.404');
   }
   ///Achievments

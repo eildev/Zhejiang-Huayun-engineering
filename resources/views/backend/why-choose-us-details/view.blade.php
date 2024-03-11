@@ -33,6 +33,7 @@
                                         <th>Title</th>
                                         <th>Description</th>
                                         <th>Icon</th>
+                                        <th>Image</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -48,12 +49,17 @@
                                                 <td>
                                                     {{ Illuminate\Support\Str::limit($data->title ?? '', 15) }}
                                                 </td>
-                                                
 
-                                                <td>{!! substr(strip_tags($data->description ), 0, 15) !!}...</td>
+
+                                                <td>{!! substr(strip_tags($data->description), 0, 15) !!}...</td>
                                                 <td>
                                                     <img style="height: 50px; object-fit:contain;"
                                                         src="{{ asset('uploads/why-choose-us/' . $data->icon ?? '') }}"
+                                                        alt="testimonial user image">
+                                                </td>
+                                                <td>
+                                                    <img style="height: 50px; object-fit:contain;"
+                                                        src="{{ asset('uploads/why-choose-us/details/' . $data->image ?? '') }}"
                                                         alt="testimonial user image">
                                                 </td>
                                                 <td>

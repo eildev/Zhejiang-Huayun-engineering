@@ -86,6 +86,24 @@
                                     @enderror
                                 </div>
                             </div>
+                            <div class="row mb-3">
+                                <label for="example-input" class="col-sm-2 col-form-label">Image</label>
+                                <div class="col-sm-10">
+                                    <input name="image" class="form-control @error('image') is-invalid  @enderror"
+                                        type="file" id="image2">
+                                </div>
+                            </div>
+                            <!-- end row -->
+                            <div class="row mb-3">
+                                <label for="example-url-input" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10">
+                                    <img id="showImage2" class="rounded avatar-lg "
+                                        src="{{ asset('uploads/about/no_images.jpg') }}" alt="About Image" name="">
+                                    @error('image')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
 
                             <div class="row mb-3">
                                 <label for="example-number-input" class="col-sm-2 col-form-label"></label>
