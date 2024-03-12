@@ -12,7 +12,10 @@ use App\Models\SectionDetails;
 
 use App\Models\ManagingTeams;
 use App\Models\Section;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 55b40803b71f94594764863d455f22c74a65647a
 use Carbon\Carbon;
 
 class IndexController extends Controller
@@ -121,8 +124,9 @@ class IndexController extends Controller
     return view('frontend.errors.404');
   }
   ///Achievments
-  public function AchievementsDetails($id){
+  public function AchievementsDetails($id)
+  {
     $achievements = SectionDetails::findorFail($id);
-    return view('frontend.achievments.achievments',compact('achievements'));
+    return view('frontend.achievments.achievments', compact('achievements'));
   }
 }

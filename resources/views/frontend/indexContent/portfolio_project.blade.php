@@ -1,6 +1,6 @@
 @php
     $section = App\Models\Section::where('title', 'Experience')->first();
- 
+
     $experience = App\Models\SectionDetails::where('section_id', $section->id)
         ->latest()
         ->limit(4)
@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="protfolio-item-title">
                                     <h3>{{ Illuminate\Support\Str::limit($project->title, 20) }}</h3>
-                                    <h3>{!! Illuminate\Support\Str::limit($project->description, 20) !!}</h3>
+                                    {{-- <p>{!! Illuminate\Support\Str::limit(strip_tags($project->description), 20) !!}</p> --}}
                                 </div>
                             </div>
                             @php
