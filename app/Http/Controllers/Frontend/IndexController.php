@@ -124,5 +124,9 @@ class IndexController extends Controller
   {
     $achievements = SectionDetails::findorFail($id);
     return view('frontend.achievments.achievments', compact('achievements'));
-  }
+  }//
+  //All project Experience
+  // public function AllProjectExperience(){
+  //   return view('frontend.project.project_experience');
+  // }
 }
