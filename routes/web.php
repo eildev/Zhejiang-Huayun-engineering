@@ -270,6 +270,7 @@ Route::controller(IndexController::class)->group(function () {
    // Route::get('/team-details/{id}', 'TeamDetails')->name('team.details');
     // All Project /Section
     Route::get('/all-project', 'AllProject')->name('all.project');
+   // Route::get('/all-project-experience', 'AllProjectExperience')->name('all.project.experience');
     Route::get('/project-details/{id}', 'ProjectDetails')->name('project.details');
     //404 page
     Route::get('/404-page', 'Error404')->name('404.error');

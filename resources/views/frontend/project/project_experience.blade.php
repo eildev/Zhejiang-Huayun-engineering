@@ -1,4 +1,4 @@
-@extends('frontend.frontend_master')
+<!-- @extends('frontend.frontend_master')
 @section('content')
     <div class="breatcome-section">
         <div class="container">
@@ -6,8 +6,8 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="breatcome-content">
                         <div class="breatcome-title">
-                            <h1>Projects List</h1>
-                        </div>
+                            <h1>Projects Experience List</h1>
+                        </div>e
                         <div class="bratcome-text">
                             <ul>
                                 <li><a href="#">Home</a></li>
@@ -21,44 +21,28 @@
     </div>
     @php
     $section = App\Models\Section::where('title', 'Experience')->first();
+
     $experience = App\Models\SectionDetails::where('section_id', $section->id)
         ->latest()
         ->get();
-
-     @endphp
-
+@endphp -->
     <!--==================================================-->
     <!--End Solar Panel  slider Section  -->
     <!--==================================================-->
-    <div class="project-grid-section">
+    <!-- <div class="project-grid-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="protfolio-nav text-center">
-                        <div class="protfolio-menu">
-                            <ul class="menu-filtering">
-                                <li class="current_menu_item" data-filter="*"> All Projects </li>
-                                <li data-filter=".physics" class=""> Business </li>
-                                <li data-filter=".chemistry" class=""> Energy </li>
-                                <li data-filter=".math"> Finance </li>
-                                <li data-filter=".bangla"> Supply Chain </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div class="row image_load">
-                @if (!empty($experience ))
-                    @foreach ($experience  as $project)
-                        <a href="{{ route('project.details', $project->id) }}"
+                @if (!empty($experience))
+                    @foreach ($experience as $project)
+                        <a href="#"
                             class="col-lg-4 col-md-6 grid-item physics math mb-30">
                             <div class="project-grid-box">
-                                  @php
+                                <div class="project-thumb">
+                                @php
                                     $image = explode(',', $project->multi_image);
                                 @endphp
-                                <div class="project-thumb">
-
-                                    <img src="{{ asset('uploads/multi_img/'.$image[0]) }}" height="280px"
+                                    <img src="{{ asset('uploads/section/' . $project->image) }}" height="280px"
                                         width="280px" alt="Projects Image">
                                 </div>
                                 <div class="project-content">
@@ -138,8 +122,8 @@
                 @endif
             </div>
         </div>
-    </div>
+    </div> -->
     <!--==================================================-->
     <!-- End Solar Panel  Project Grid  Section -->
     <!--==================================================-->
-@endsection
+<!-- @endsection -->

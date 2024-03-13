@@ -47,31 +47,7 @@
                                 <h6>project name:</h6>
                                 <p>{{ $projectDetails->title }}</p>
                             </li>
-                            <li>
-                                <h6>client:</h6>
-                                <p>theme pvt ltd</p>
-                            </li>
-                            <li>
-                                <h6>category:</h6>
-                                <p>commercial</p>
-                            </li>
-                            <li>
-                                <h6>delivery mode:</h6>
-                                <p>in hand delivery</p>
-                            </li>
-                            <li>
-                                <h6>location:</h6>
-                                <p>USA</p>
-                            </li>
-                            <li>
-                                <h6>share:</h6>
-                                <ul class="d-flex">
-                                    <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </li>
+                        
                         </ul>
                     </div>
                 </div>

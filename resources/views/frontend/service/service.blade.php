@@ -47,8 +47,8 @@ $seviceDetails = App\Models\ServicesDetails::latest()->get();
 									<img src="{{asset('uploads/services_image/'.$service->services_details_icon)}}" height="50" width="46" alt="">
 								</div>
 								<div class="service-text">
-									<h4><a href="{{route('service.details',$service->id)}}">{!! substr(strip_tags($service->services_details_title), 0,20)!!}</a></h4>
-									<p><a href="{{route('service.details',$service->id)}}">{!! substr(strip_tags($service->services_details_description), 0, 65) !!}...</a></p>
+									<h4><a href="{{route('service.details',$service->id)}}">{!!Str::limit(strip_tags($service->services_details_title), 18, '..') ?? 'Lorem Ipsum is simply dummy' !!} </a></h4>
+									<p><a href="{{route('service.details',$service->id)}}">{!! substr(strip_tags($service->services_details_description), 0, 50) !!}...</a></p>
 									<a href="{{route('service.details',$service->id)}}">Read More <i class="bi bi-arrow-up-right"></i></a>
 								</div>
 							</div>
