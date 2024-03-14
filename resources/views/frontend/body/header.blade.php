@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-6">
                 <div class="logo">
-                    <a href="{{ url('/') }}"><img src="{{ asset('frontend') }}/assets/images/logo.png"
+                    <a href="{{ url('/') }}"><img src="{{ asset('frontend') }}/assets/images/logo.png" width="120px" height="90px"
                             alt="logo"></a>
                 </div>
             </div>

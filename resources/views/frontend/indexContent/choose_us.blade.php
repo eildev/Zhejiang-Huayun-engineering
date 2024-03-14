@@ -1,8 +1,8 @@
 @php
-    $chooseUs = App\Models\WhyChooseUsDetails::latest()->limit(4)->get();
+    $chooseUs = App\Models\WhyChooseUsDetails::latest()->limit(3)->get();
     $whyChooseUs = App\Models\WhyChooseUs::latest()->limit(1)->first();
 @endphp
-<div class="offer-section style-two">
+<!-- <div class="offer-section style-two">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-md-12">
@@ -15,7 +15,6 @@
                     </div>
                 </div>
                 <div class="row inner">
-                    @if (!empty($chooseUs))
                         @foreach ($chooseUs as $choose)
                             <div class="col-lg-4 col-md-4 col-sm-6 col-6">
                                 <div class="offer-items-box wow animate__slideInRight">
@@ -44,87 +43,6 @@
                                 </div>
                             </div>
                         @endforeach
-                    @else
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                            <div class="offer-items-box wow animate__slideInRight">
-                                <div class="offer-icon-thumb">
-                                    <img src="{{ asset('frontend') }}/assets/images/resource/offer-icon1.png"
-                                        alt="">
-                                </div>
-                                <div class="offer-content">
-                                    <h4>Battery Storage</h4>
-                                    <p>Solar PV, Battery Storage
-                                        Heat Recovery </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                            <div class="offer-items-box wow animate__slideInLeft">
-                                <div class="offer-icon-thumb">
-                                    <img src="{{ asset('frontend') }}/assets/images/resource/offer-icon2.png"
-                                        alt="">
-                                </div>
-                                <div class="offer-content">
-                                    <h4>Energy Around</h4>
-                                    <p>Solar PV, Battery Storage
-                                        Heat Recovery </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                            <div class="offer-items-box">
-                                <div class="offer-icon-thumb wow animate__slideInRight">
-                                    <img src="{{ asset('frontend') }}/assets/images/resource/offer-icon3.png"
-                                        alt="">
-                                </div>
-                                <div class="offer-content wow animate__slideInDown">
-                                    <h4>Solar PV Systems</h4>
-                                    <p>Solar PV, Battery Storage
-                                        Heat Recovery </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                            <div class="offer-items-box">
-                                <div class="offer-icon-thumb wow animate__slideInUp">
-                                    <img src="{{ asset('frontend') }}/assets/images/resource/offer-icon4.png"
-                                        alt="">
-                                </div>
-                                <div class="offer-content wow animate__slideInLeft">
-                                    <h4>Technical Service</h4>
-                                    <p>Solar PV, Battery Storage
-                                        Heat Recovery </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                            <div class="offer-items-box wow animate__zoomIn">
-                                <div class="offer-icon-thumb">
-                                    <img src="{{ asset('frontend') }}/assets/images/resource/offer-icon5.png"
-                                        alt="">
-                                </div>
-                                <div class="offer-content">
-                                    <h4>Wind Generators</h4>
-                                    <p>Solar PV, Battery Storage
-                                        Heat Recovery </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                            <div class="offer-items-box wow animate__slideInDown">
-                                <div class="offer-icon-thumb">
-                                    <img src="{{ asset('frontend') }}/assets/images/resource/offer-icon6.png"
-                                        alt="">
-                                </div>
-                                <div class="offer-content">
-                                    <h4>Inspection skill</h4>
-                                    <p>Solar PV, Battery Storage
-                                        Heat Recovery </p>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
-
                 </div>
             </div>
             <div class="col-lg-5 col-md-12 pl-0">
@@ -139,4 +57,49 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+<div class="testimonial-section wow animate__slideInUp mt-1">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title text-center wow animate__zoomIn">
+						<div class="section-sub-title">
+							<h4>Choose Us</h4>
+						</div>
+						<div class="section-main-title ">
+							<h2>Few Reasons to Choose Us</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				
+            @foreach ($chooseUs as $choose)
+					<div class="col-lg-4">
+						<div class="testi-item-box">
+							<div class="testi-content">
+							
+								<div class="testi-title">
+                                @if (!empty($choose->title))
+                                            <h6>{{ Illuminate\Support\Str::limit($choose->title, 60) }}</h6>
+                                        @else
+                                            <h4>Energy Around</h4>
+                                        @endif
+	
+								</div>
+								<div class="testi-discription">
+                                @if (!empty($choose->description))
+                                            <p>{!! Illuminate\Support\Str::limit(strip_tags($choose->description), 150) !!}</p>
+                                        @else
+                                            <p>Solar PV, Battery Storage Heat Recovery</p>
+                                        @endif
+								</div>
+							
+							</div>
+						</div>
+					</div>
+				
+                    @endforeach
+			</div>
+		</div>
+	</div>

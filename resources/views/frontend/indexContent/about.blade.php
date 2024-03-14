@@ -29,7 +29,7 @@
                         </div>
                         <div class="about-counter-two d-flex align-items-center ">
                             <div class="about-counter-img">
-                                <img src="{{ optional($testimonial)->image ? asset('uploads/testimonial/' . $testimonial->image) : asset('uploads/dummy.jpg') }}"
+                                <img src="{{ optional($testimonial)->image ? asset('uploads/testimonial/' . $testimonial->image) : asset('uploads/dummy.jpg') }}" height="79px" width="79px"
                                     alt="about image">
 
 

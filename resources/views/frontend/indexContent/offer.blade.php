@@ -2,7 +2,7 @@
     $section = App\Models\Section::where('title', 'Achievement')->first();
     $achievements = App\Models\SectionDetails::where('section_id', $section->id)
         ->latest()
-        ->limit(3)
+        ->limit(6)
         ->get();
 
     $overview = App\Models\Overview::latest()->limit(3)->get();
@@ -104,7 +104,7 @@
                 @endif
 
                 <!-- start progress bar -->
-                @if ($overview->count() > 0)
+
                     <div class="process-ber-plugin">
                         @foreach ($overview as $data)
                             <span class="process-bar">{{ $data->title ?? '' }}</span>
@@ -118,28 +118,7 @@
                             </div>
                         @endforeach
                     </div>
-                @else
-                    <div class="process-ber-plugin">
-                        <span class="process-bar">Customer Satisficed </span>
-                        <div id="bar1" class="barfiller">
-                            <div class="tipWrap" style="display: inline;">
-                                <span class="tip"
-                                    style="left: 100.254px; transition: left 7s ease-in-out 0s;">90%</span>
-                            </div>
-                            <span class="fill" data-percentage="90"
-                                style="background: rgb(22, 181, 151); width: 100.076px; transition: width 7s ease-in-out 0s;"></span>
-                        </div>
-                        <span class="process-bar">Customer Satisficed</span>
-                        <div id="bar2" class="barfiller">
-                            <div class="tipWrap" style="display: inline;">
-                                <span class="tip"
-                                    style="left: 100.294px; transition: left 7s ease-in-out 0s;">69%</span>
-                            </div>
-                            <span class="fill my-class" data-percentage="69"
-                                style="background: rgb(22, 181, 151); width: 100.117px; transition: width 7s ease-in-out 0s;"></span>
-                        </div>
-                    </div>
-                @endif
+           
 
                 <!-- end progress bar -->
             </div>

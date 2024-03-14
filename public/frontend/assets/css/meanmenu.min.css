@@ -1,6 +1,6 @@
 a.meanmenu-reveal{display:none}
 .mean-container .mean-bar {
-  background: #FF3B00;
+  background: #1F497D;
   float: left;
   min-height: 60px;
   padding: 4px 0 0;
@@ -121,7 +121,7 @@ a.meanmenu-reveal{display:none}
 }
 .mean-container .mean-bar::before {
     color: #fff;
-    content: "Solar Panel ";
+    content: "HYDC";
     font-size: 28px;
     font-weight: 600;
     left: 10px;

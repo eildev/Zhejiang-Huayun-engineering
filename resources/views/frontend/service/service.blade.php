@@ -42,7 +42,7 @@ $seviceDetails = App\Models\ServicesDetails::latest()->get();
 					<div class="service-box wow animate__backInLeft">
 						<div class="service-thumb">
 							<img src="{{asset('uploads/services_image/'.$service->services_details_image)}}" height="338" width="438" alt="service">
-							<div class="service-content" style="background-image: url({{asset('frontend/uploads/servie-hover.png')}})!important;">
+							<div class="service-content" style="background-image: url({{asset('frontend/uploads/servie-hover.jpg')}})!important;">
 								<div class="service-icon-thumb">
 									<img src="{{asset('uploads/services_image/'.$service->services_details_icon)}}" height="50" width="46" alt="">
 								</div>

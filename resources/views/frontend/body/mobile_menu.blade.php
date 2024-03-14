@@ -15,7 +15,7 @@
 						<li><a href="{{route('all.team')}}">Team</a>
 						
 						</li>
-						<li><a href="contact-us.html">Contacts</a></li>
+						<li><a href="{{ route('contact.us') }}">Contacts</a></li>
 				</ul>
 			</nav>
 		</div>
