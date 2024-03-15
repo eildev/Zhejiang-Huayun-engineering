@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="footer-wiget wow animate__slideInDown">
+                <div class="footer-wiget wow animate__slideInDown text-center">
                     <div class="footer-wiget-title">
                         <h4>Quick Links</h4>
                     </div>

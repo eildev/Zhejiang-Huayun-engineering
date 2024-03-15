@@ -58,12 +58,12 @@
         </div>
     </div>
 </div> -->
-<div class="testimonial-section wow animate__slideInUp mt-1">
-		<div class="container">
+<div class="testimonial-section wow animate__slideInUp ">
+		<div class="container ">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="section-title text-center wow animate__zoomIn">
-						<div class="section-sub-title">
+					<div class="section-title text-center wow animate__zoomIn ">
+						<div class="section-sub-title " style="margin-top:40px">
 							<h4>Choose Us</h4>
 						</div>
 						<div class="section-main-title ">

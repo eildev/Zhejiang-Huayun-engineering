@@ -2555,8 +2555,8 @@
 
     .about-counter-two {
         left: 0%;
-        width: 100%;
-        height: 100px;
+        width: auto;
+        height: auto;
     }
 
     .about-number-two h4 {
@@ -2566,6 +2566,8 @@
     .about-section-sub-title h4 {
         font-size: 18px;
         line-height: 18px;
+        margin-top: 20px;
+
     }
 
     .about-section-main-title h2 {

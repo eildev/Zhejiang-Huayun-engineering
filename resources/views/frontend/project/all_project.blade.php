@@ -35,15 +35,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="protfolio-nav text-center">
-                        <div class="protfolio-menu">
-                            <ul class="menu-filtering">
-                                <li class="current_menu_item" data-filter="*"> All Projects </li>
-                                <li data-filter=".physics" class=""> Business </li>
-                                <li data-filter=".chemistry" class=""> Energy </li>
-                                <li data-filter=".math"> Finance </li>
-                                <li data-filter=".bangla"> Supply Chain </li>
-                            </ul>
-                        </div>
+                      
+                          
+                     
                     </div>
                 </div>
             </div>

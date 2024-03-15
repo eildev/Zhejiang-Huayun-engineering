@@ -69,11 +69,7 @@
                     <label for="example-url-input" class="col-sm-2 col-form-label"></label>
                     <div class="col-sm-10">
                     <div class="row" id="preview_img">
-                    @foreach ($sectionDetailsall as $item)
-                        @foreach(explode(',', $item->multi_image) as $image)
-                            <img style="height: 60px; width:60px; margin-right: 5px;" src="{{ asset('uploads/multi_img/' . $image) }}" alt="Image">
-                        @endforeach
-                    @endforeach
+                 
                 </div>
                         <!-- <img id="preview_img" class="rounded avatar-lg row" src="{{asset('uploads/about/no_images.jpg')}}" alt="Image"> -->
                     </div>

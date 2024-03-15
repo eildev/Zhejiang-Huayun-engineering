@@ -196,6 +196,7 @@ li,
 ul {
     font-style: normal;
     font-weight: 400;
+    text-decoration: none;
 }
 
 /* Default Background */

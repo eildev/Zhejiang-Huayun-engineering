@@ -3,8 +3,7 @@
     $about = App\Models\AboutSettings::all()->first();
     $testimonial = App\Models\Testimonial::all()->first();
 
-    // dd($aboutIntro->all());
-    // dd($aboutIntro->mission);
+  
 
 @endphp
 <div class="about-section">

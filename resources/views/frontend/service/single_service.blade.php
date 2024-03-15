@@ -61,7 +61,7 @@ use Illuminate\Support\Str;
 							</ul>
 						</div>
 					</div>
-					<div class="widget-help-box">
+					<!-- <div class="widget-help-box">
 						<div class="widget-content">
 							<h4>Need help?</h4>
 							<p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
@@ -72,7 +72,7 @@ use Illuminate\Support\Str;
 							  </ul>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
